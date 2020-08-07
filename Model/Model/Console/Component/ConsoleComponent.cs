@@ -4,14 +4,6 @@ using System.Threading.Tasks;
 
 namespace NiceET
 {
-    public class ConsoleComponentAwakeSystem : StartSystem<ConsoleComponent>
-    {
-        public override void Start(ConsoleComponent self)
-        {
-            self.Start().Coroutine();
-        }
-    }
-
     public static class ConsoleMode
     {
         public const string None = "";
