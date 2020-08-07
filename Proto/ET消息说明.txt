@@ -1,0 +1,16 @@
+
+
+
+IMessage 
+IRequest
+IResponse
+
+
+IActorMessage 
+IActorRequest
+IActorResponse
+
+
+IActorLocationMessage
+IActorLocationRequest
+IActorLocationResponse
