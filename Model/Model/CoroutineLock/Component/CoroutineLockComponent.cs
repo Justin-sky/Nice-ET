@@ -3,15 +3,6 @@ using System.Collections.Generic;
 
 namespace NiceET
 {
-
-    public class CoroutineLockComponentSystem : AwakeSystem<CoroutineLockComponent>
-    {
-        public override void Awake(CoroutineLockComponent self)
-        {
-            self.Awake();
-        }
-    }
-
     public class CoroutineLockComponent : Entity
     {
         public static CoroutineLockComponent Instance { get; private set; }
