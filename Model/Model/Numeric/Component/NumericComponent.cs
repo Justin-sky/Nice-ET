@@ -13,15 +13,6 @@ namespace NiceET
 		}
 	}
 
-
-	public class NumericComponentAwakeSystem : AwakeSystem<NumericComponent>
-	{
-		public override void Awake(NumericComponent self)
-		{
-			self.Awake();
-		}
-	}
-
 	public class NumericComponent : Entity
 	{
 		public Dictionary<int, int> NumericDic = new Dictionary<int, int>();
