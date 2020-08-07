@@ -1,0 +1,8 @@
+.vs/
+Bin/
+ThirdParty/ShareLib/obj/
+ThirdParty/Google.Protobuf/obj/
+Proto2Cs/obj/
+Hotfix/obj/
+Model/obj/
+NiceET/obj/

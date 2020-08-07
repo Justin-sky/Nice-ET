@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "NiceET": {
+      "commandName": "Project",
+      "commandLineArgs": "--Process 1"
+    }
+  }
+}
