@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "A6or5MmYDP9tjNsu23lgQWrZhLf823fFwpNbkJWs7wP4+YMOazk+pPKqyZXlbtFkZnaOYyLpugXrFN+texhgvg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Justin\\Documents\\u3dWorkspace\\NICE_Framework\\Nice-ET\\ThirdParty\\Google.Protobuf\\Google.Protobuf.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Justin\\.nuget\\packages\\mongodb.bson\\2.11.0\\mongodb.bson.2.11.0.nupkg.sha512"
+  ],
+  "logs": []
+}
