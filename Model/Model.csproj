@@ -19,4 +19,8 @@
     <ProjectReference Include="..\ThirdParty\ShareLib\ShareLib.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Game\System\" />
+  </ItemGroup>
+
 </Project>

@@ -2,7 +2,7 @@
 
 namespace NiceET
 {
-	public class SessionPlayerComponentDestroySystem : DestroySystem<SessionPlayerComponent>
+	public class SessionPlayerComponentSystem : DestroySystem<SessionPlayerComponent>
 	{
 		public override void Destroy(SessionPlayerComponent self)
 		{

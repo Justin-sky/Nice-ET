@@ -13,13 +13,9 @@ namespace NiceET
     public abstract class AChannel : Entity
     {
         public ChannelType ChannelType { get; }
-
         public AService Service { get; }
-
         public abstract MemoryStream Stream { get; }
-
         public int Error { get; set; }
-
         public string RemoteAddress { get; protected set; }
 
         public virtual void Start()
