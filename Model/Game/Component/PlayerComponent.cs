@@ -3,13 +3,7 @@ using System.Linq;
 
 namespace NiceET
 {
-	public class PlayerComponentSystem : AwakeSystem<PlayerComponent>
-	{
-		public override void Awake(PlayerComponent self)
-		{
-			self.Awake();
-		}
-	}
+
 
 	public class PlayerComponent : Entity
 	{
