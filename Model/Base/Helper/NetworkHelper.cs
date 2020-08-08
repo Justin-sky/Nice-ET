@@ -1,9 +1,21 @@
-﻿using System.Net;
+﻿using System.Collections.Generic;
+using System.Net;
 
 namespace NiceET
 {
 	public static class NetworkHelper
 	{
+		public static string[] GetAddressIPs()
+		{
+			//获取本地的IP地址
+			List<string> addressIPs = new List<string>();
+			foreach (IPAddress address in Dns.GetHostEntry(Dns.GetHostName()).AddressList)
+			{
+				addressIPs.Add(address.ToString());
+			}
+			return addressIPs.ToArray();
+		}
+
 		public static IPEndPoint ToIPEndPoint(string host, int port)
 		{
 			return new IPEndPoint(IPAddress.Parse(host), port);
