@@ -16,9 +16,9 @@ namespace NiceET
                         InnerMessageDispatcherHelper.HandleIActorRequest(session, iActorRequest).Coroutine();
                         return;
                     }
-                case IActorMessage iactorMessage:
+                case IActorMessage iActorMessage:
                     {
-                        InnerMessageDispatcherHelper.HandleIActorMessage(session, iactorMessage).Coroutine();
+                        InnerMessageDispatcherHelper.HandleIActorMessage(session, iActorMessage).Coroutine();
                         return;
                     }
                 case IActorResponse iActorResponse:
