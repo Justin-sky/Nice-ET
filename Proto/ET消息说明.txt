@@ -14,3 +14,38 @@ IActorResponse
 IActorLocationMessage
 IActorLocationRequest
 IActorLocationResponse
+
+
+------------------------------------------
+ActorMessageHandler
+
+Actor_TransferHandler 			: AMActorRpcHandler
+G2M_CreateUnitHandler 			: AMActorRpcHandler
+R2G_GetLoginKeyHandler 			: AMActorRpcHandler
+M2M_TrasferUnitRequestHandler 	: AMActorRpcHandler
+
+C2M_TestActorRequestHandler 	: AMActorLocationRpcHandler
+
+Frame_ClickMapHandler 			: AMActorLocationHandler
+G2M_SessionDisconnectHandler	: AMActorLocationHandler
+
+----------------------------------------
+MessageHandler
+
+C2G_EnterMapHandler 		: AMRpcHandler
+C2G_LoginGateHandler 		: AMRpcHandler
+C2R_LoginHandler 			: AMRpcHandler
+C2G_PlayerInfoHandler 		: AMRpcHandler
+C2M_ReloadHandler 			: AMRpcHandler
+C2R_PingHandler 			: AMRpcHandler
+M2A_ReloadHandler 			: AMRpcHandler
+
+G2C_TestHandler 			: AMHandler
+---------------------------------------
+
+
+
+
+
+
+
