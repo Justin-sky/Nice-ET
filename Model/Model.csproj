@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ThirdParty\Google.Protobuf\Google.Protobuf.csproj" />
+    <ProjectReference Include="..\ThirdParty\KcpLib\KcpLib.csproj" />
     <ProjectReference Include="..\ThirdParty\ShareLib\ShareLib.csproj" />
   </ItemGroup>
 
