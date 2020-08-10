@@ -18,8 +18,14 @@ namespace NiceET
 		{
 			switch (protocol)
 			{
+				case NetworkProtocol.KCP:
+					this.Service = new KService() { Parent = this };
+					break;
 				case NetworkProtocol.TCP:
 					this.Service = new TService() { Parent = this };
+					break;
+				case NetworkProtocol.WebSocket:
+					this.Service = new WService() { Parent = this };
 					break;
 			}
 		}
@@ -31,9 +37,17 @@ namespace NiceET
 				IPEndPoint ipEndPoint;
 				switch (protocol)
 				{
+					case NetworkProtocol.KCP:
+						ipEndPoint = NetworkHelper.ToIPEndPoint(address);
+						this.Service = new KService(ipEndPoint, (channel) => { this.OnAccept(channel); }) { Parent = this };
+						break;
 					case NetworkProtocol.TCP:
 						ipEndPoint = NetworkHelper.ToIPEndPoint(address);
 						this.Service = new TService(ipEndPoint, (channel) => { this.OnAccept(channel); }) { Parent = this };
+						break;
+					case NetworkProtocol.WebSocket:
+						string[] prefixs = address.Split(';');
+						this.Service = new WService(prefixs, (channel) => { this.OnAccept(channel); }) { Parent = this };
 						break;
 				}
 			}
