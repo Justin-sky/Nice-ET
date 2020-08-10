@@ -13,8 +13,8 @@ namespace NiceET
 	{
 		public const int PacketSizeLength = 4;
 		public const int MinPacketSize = 2;
-		public const int OpcodeIndex = 4;
-		public const int MessageIndex = 0;
+		public const int OpcodeIndex = 0;
+		public const int MessageIndex = 2;
 	}
 
 	public class PacketParser

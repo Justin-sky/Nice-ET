@@ -118,10 +118,9 @@ namespace NiceET
 
 		private void Run(MemoryStream memoryStream)
 		{
-			int seq = BitConverter.ToInt32(memoryStream.GetBuffer(), Packet.MessageIndex);
 			ushort opcode = BitConverter.ToUInt16(memoryStream.GetBuffer(), Packet.OpcodeIndex);
 
-			memoryStream.Seek(Packet.MinPacketSize + Packet.OpcodeIndex, SeekOrigin.Begin);
+			memoryStream.Seek(Packet.MinPacketSize, SeekOrigin.Begin);
 			object message;
 			try
 			{
@@ -249,14 +248,13 @@ namespace NiceET
 
 			MemoryStream stream = this.Stream;
 
-			int seq = 11;
-			stream.Seek(Packet.MinPacketSize + Packet.OpcodeIndex, SeekOrigin.Begin);
-			stream.SetLength(Packet.MinPacketSize + Packet.OpcodeIndex);
+			stream.Seek(Packet.MessageIndex, SeekOrigin.Begin);
+			stream.SetLength(Packet.MessageIndex);
 			this.Network.MessagePacker.SerializeTo(message, stream);
 			stream.Seek(0, SeekOrigin.Begin);
 
 			opcodeBytes.WriteTo(0, opcode);
-			Array.Copy(opcodeBytes, 0, stream.GetBuffer(), Packet.OpcodeIndex, opcodeBytes.Length);
+			Array.Copy(opcodeBytes, 0, stream.GetBuffer(), 0, opcodeBytes.Length);
 
 			this.Send(stream);
 		}

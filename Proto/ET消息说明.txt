@@ -47,5 +47,8 @@ G2C_TestHandler 			: AMHandler
 
 
 
-
-
+BaseAttribute
+	---MessageAttribute
+	---ConfigAttribute
+	---EventAttribute
+	---ObjectSystemAttribute
