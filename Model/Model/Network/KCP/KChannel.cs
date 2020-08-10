@@ -384,25 +384,20 @@ namespace NiceET
 			}
 		}
 
-#if !ENABLE_IL2CPP
+
 		private KcpOutput kcpOutput;
-#endif
+
 
 		public void SetOutput()
 		{
-#if ENABLE_IL2CPP
-			Kcp.KcpSetoutput(this.kcp, KcpOutput);
-#else
 			// 跟上一行一样写法，pc跟linux会出错, 保存防止被GC
 			kcpOutput = KcpOutput;
 			Kcp.KcpSetoutput(this.kcp, kcpOutput);
-#endif
+
 		}
 
 
-#if ENABLE_IL2CPP
-		[AOT.MonoPInvokeCallback(typeof(KcpOutput))]
-#endif
+
 		public static int KcpOutput(IntPtr bytes, int len, IntPtr kcp, IntPtr user)
 		{
 			KService.Output(bytes, len, user);
