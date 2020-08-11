@@ -16,7 +16,7 @@
         {
             get
             {
-                return scene ?? (scene = EntitySceneFactory.CreateScene(1, SceneType.Process, "Process"));
+                return scene ?? (scene = SceneFactory.CreateScene(1, SceneType.Process, "Process"));
             }
         }
 

@@ -14,7 +14,7 @@ namespace NiceET
 
         public static async ETTask<Scene> Create(Entity parent, long id, int zone, string name, SceneType sceneType, StartSceneConfig startSceneConfig = null)
         {
-            Scene scene = EntitySceneFactory.CreateScene(id, zone, sceneType, name);
+            Scene scene = CreateScene(id, zone, sceneType, name);
             scene.Parent = parent;
 
             scene.AddComponent<MailBoxComponent, MailboxType>(MailboxType.UnOrderMessageDispatcher);
@@ -36,6 +36,27 @@ namespace NiceET
                     scene.AddComponent<LocationComponent>();
                     break;
             }
+
+            return scene;
+        }
+
+        public static Scene CreateScene(long id, int zone, SceneType sceneType, string name, Scene parent = null)
+        {
+            Scene scene = new Scene(id, zone, sceneType, name);
+            scene.IsRegister = true;
+            scene.Parent = parent;
+            scene.Domain = scene;
+
+            return scene;
+        }
+
+        public static Scene CreateScene(int zone, SceneType sceneType, string name, Scene parent = null)
+        {
+            long id = IdGenerater.GenerateId();
+            Scene scene = new Scene(id, zone, sceneType, name);
+            scene.IsRegister = true;
+            scene.Parent = parent;
+            scene.Domain = scene;
 
             return scene;
         }
