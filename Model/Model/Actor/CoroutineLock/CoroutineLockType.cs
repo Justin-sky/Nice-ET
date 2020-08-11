@@ -14,10 +14,6 @@
         LevelSeal,//玩家请求是否达到等级封印时使用
         ClientChangeScene, // 客户端切换场景
 
-        // Client
-        Resources,
-        ResourcesLoader,
-
         Max, // 这个必须在最后
     }
 }
