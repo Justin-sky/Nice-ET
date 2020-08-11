@@ -43,7 +43,7 @@ namespace NiceET
             this.adressSessions.Add(addr, session);
 
             // 内网connect连接，一分钟检查一次，10分钟没有收到发送消息则断开
-            session.AddComponent<SessionIdleCheckerComponent, int, int, int>(60 * 1000, int.MaxValue, 60 * 1000);
+            session.AddComponent<SessionIdleCheckerComponent, int, int, int>(60 * 1000, int.MaxValue, 10 * 60 * 1000);
 
             return session;
         }

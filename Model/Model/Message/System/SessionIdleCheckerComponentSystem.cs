@@ -10,7 +10,8 @@ namespace NiceET
         {
             Session session = self.GetParent<Session>();
             long timeNow = TimeHelper.Now();
-            if (timeNow - session.LastRecvTime < self.RecvMaxIdleTime && timeNow - session.LastSendTime < self.SendMaxIdleTime)
+            if (timeNow - session.LastRecvTime < self.RecvMaxIdleTime &&
+                timeNow - session.LastSendTime < self.SendMaxIdleTime)
             {
                 return;
             }
