@@ -7,6 +7,7 @@ namespace NiceET
 	{
 		protected override async ETTask Run(Unit unit, G2M_SessionDisconnect message)
 		{
+			Log.Debug("客户端下线，通知Map下线...");
 			unit.GetComponent<UnitGateComponent>().IsDisconnect = true;
 			await ETTask.CompletedTask;
 		}
