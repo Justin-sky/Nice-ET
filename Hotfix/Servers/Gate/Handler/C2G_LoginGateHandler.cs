@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MongoDB.Bson;
+using System;
 
 
 namespace NiceET
@@ -22,8 +23,12 @@ namespace NiceET
 				reply();
 				return;
 			}
+	
+
 			Player player = EntityFactory.Create<Player, string>(Game.Scene, account);
+			
 			scene.GetComponent<PlayerComponent>().Add(player);
+
 			session.AddComponent<SessionPlayerComponent>().Player = player;
 			session.AddComponent<MailBoxComponent, MailboxType>(MailboxType.GateSession);
 

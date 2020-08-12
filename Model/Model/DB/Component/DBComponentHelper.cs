@@ -13,7 +13,8 @@ namespace NiceET
 		{
 			using (await CoroutineLockComponent.Instance.Wait(CoroutineLockType.DB, id % DBComponent.TaskCount))
 			{
-				IAsyncCursor<T> cursor = await self.GetCollection<T>(collection).FindAsync(d => d.Id == id);
+				IAsyncCursor<T> cursor = await self.GetCollection<T>(collection).FindAsync(
+					e => e.Id == id);
 
 				return await cursor.FirstOrDefaultAsync();
 			}
@@ -124,8 +125,7 @@ namespace NiceET
 			using (await CoroutineLockComponent.Instance.Wait(CoroutineLockType.DB, entity.Id % DBComponent.TaskCount))
 			{
 				await self.GetCollection(collection).ReplaceOneAsync(
-					d => d.
-					Id == entity.Id, 
+					e => e.Id == entity.Id, 
 					entity, 
 					new ReplaceOptions { IsUpsert = true });
 			}
@@ -148,14 +148,13 @@ namespace NiceET
 			using (await CoroutineLockComponent.Instance.Wait(CoroutineLockType.DB, taskId % DBComponent.TaskCount))
 			{
 				await self.GetCollection(collection).ReplaceOneAsync(
-					d => d.
-					Id == entity.Id, 
+					e => e.Id == entity.Id, 
 					entity, 
 					new ReplaceOptions { IsUpsert = true });
 			}
 		}
 
-		public static async ETTask Save(this DBComponent self, long id, List<Entity> entities)
+		public static async ETTask Save(this DBComponent self, long taskId, List<Entity> entities)
 		{
 			if (entities == null)
 			{
@@ -163,7 +162,7 @@ namespace NiceET
 				return;
 			}
 
-			using (await CoroutineLockComponent.Instance.Wait(CoroutineLockType.DB, id % DBComponent.TaskCount))
+			using (await CoroutineLockComponent.Instance.Wait(CoroutineLockType.DB, taskId % DBComponent.TaskCount))
 			{
 				foreach (Entity entity in entities)
 				{
@@ -173,8 +172,7 @@ namespace NiceET
 					}
 
 					await self.GetCollection(entity.GetType().Name).ReplaceOneAsync(
-						d => d.
-						Id == entity.Id, 
+						e => e.Id == entity.Id, 
 						entity, 
 						new ReplaceOptions { IsUpsert = true });
 				}
@@ -202,8 +200,7 @@ namespace NiceET
 			using (await CoroutineLockComponent.Instance.Wait(CoroutineLockType.DB, id % DBComponent.TaskCount))
 			{
 				DeleteResult result = await self.GetCollection<T>(collection).DeleteOneAsync(
-					d => d.
-					Id == id);
+					e => e.Id == id);
 
 				return result.DeletedCount;
 			}
@@ -214,8 +211,7 @@ namespace NiceET
 			using (await CoroutineLockComponent.Instance.Wait(CoroutineLockType.DB, taskId % DBComponent.TaskCount))
 			{
 				DeleteResult result = await self.GetCollection<T>(collection).DeleteOneAsync(
-					d => d.
-					Id == id);
+					e => e.Id == id);
 
 				return result.DeletedCount;
 			}
