@@ -19,6 +19,9 @@ namespace NiceET
 
             scene.AddComponent<MailBoxComponent, MailboxType>(MailboxType.UnOrderMessageDispatcher);
 
+            StartZoneConfig zoneConfig = StartZoneConfigCategory.Instance.Get(zone);
+            scene.AddComponent<DBComponent, string, string>(zoneConfig.DBConnection,zoneConfig.DBName);
+
             switch (scene.SceneType)
             {
                 case SceneType.Realm:
