@@ -79,7 +79,7 @@ namespace NiceET
 
 		public static async ETTask<List<T>> QueryJson<T>(this DBComponent self, long taskId, string json, string collection = null) where T : Entity
 		{
-			using (await CoroutineLockComponent.Instance.Wait(CoroutineLockType.DB, RandomHelper.RandInt64() % DBComponent.TaskCount))
+			using (await CoroutineLockComponent.Instance.Wait(CoroutineLockType.DB, taskId % DBComponent.TaskCount))
 			{
 				FilterDefinition<T> filterDefinition = new JsonFilterDefinition<T>(json);
 				IAsyncCursor<T> cursor = await self.GetCollection<T>(collection).FindAsync(filterDefinition);
