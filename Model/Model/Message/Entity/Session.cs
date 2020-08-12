@@ -78,6 +78,7 @@ namespace NiceET
 			this.channel.Dispose();
 
 			this.requestCallback.Clear();
+		
 		}
 
 		public string RemoteAddress

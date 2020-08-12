@@ -6,9 +6,13 @@ namespace NiceET
 	{
 		public override void Destroy(SessionPlayerComponent self)
 		{
+
+			
+			self.Domain.GetComponent<PlayerComponent>()?.Remove(self.Player.Id);
+
 			// 发送断线消息
-			ActorLocationSenderComponent.Instance.Send(self.Player.UnitId, new G2M_SessionDisconnect());
-			Game.Scene.GetComponent<PlayerComponent>()?.Remove(self.Player.Id);
+			//ActorLocationSenderComponent.Instance.Send(self.Player.UnitId, new G2M_SessionDisconnect());
+
 		}
 	}
 }

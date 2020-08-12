@@ -1,6 +1,6 @@
 ﻿using MongoDB.Bson;
 using System;
-
+using System.Collections.Generic;
 
 namespace NiceET
 {
@@ -23,10 +23,22 @@ namespace NiceET
 				reply();
 				return;
 			}
-	
 
-			Player player = EntityFactory.Create<Player, string>(Game.Scene, account);
-			
+			List<Player> players =  await DBComponent.Instance.Query<Player>(
+					p=> p.Account.Equals(account)
+				);
+
+			Player player ;
+			if (players == null || players.Count == 0)
+            {
+				player = EntityFactory.Create<Player, string>(Game.Scene, account);
+				await DBComponent.Instance.Save(player);
+            }
+            else
+            {
+				player = players[0];
+            }
+
 			scene.GetComponent<PlayerComponent>().Add(player);
 
 			session.AddComponent<SessionPlayerComponent>().Player = player;
