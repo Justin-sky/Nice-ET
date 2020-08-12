@@ -34,7 +34,11 @@ namespace NiceET
             {
                 await SceneFactory.Create(Game.Scene, startConfig.SceneId, startConfig.Zone, startConfig.Name, startConfig.Type, startConfig);
             }
+
+            StartZoneConfig zoneConfig = StartZoneConfigCategory.Instance.Get(Game.Scene.DomainZone());
+            Game.Scene.AddComponent<DBComponent, string, string>(zoneConfig.DBConnection, zoneConfig.DBName);
+
         }
 
-    }
+    }  
 }
