@@ -29,7 +29,11 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\Justin\\Documents\\u3dWorkspace\\NICE_Framework\\Nice-ET\\Model\\Model.csproj": {
+                "projectPath": "C:\\Users\\Justin\\Documents\\u3dWorkspace\\NICE_Framework\\Nice-ET\\Model\\Model.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -44,6 +48,276 @@
             "DotNetCore.NPOI": {
               "target": "Package",
               "version": "[1.2.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Justin\\Documents\\u3dWorkspace\\NICE_Framework\\Nice-ET\\Model\\Model.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Justin\\Documents\\u3dWorkspace\\NICE_Framework\\Nice-ET\\Model\\Model.csproj",
+        "projectName": "Model",
+        "projectPath": "C:\\Users\\Justin\\Documents\\u3dWorkspace\\NICE_Framework\\Nice-ET\\Model\\Model.csproj",
+        "packagesPath": "C:\\Users\\Justin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Justin\\Documents\\u3dWorkspace\\NICE_Framework\\Nice-ET\\Model\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Justin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\Justin\\Documents\\u3dWorkspace\\NICE_Framework\\Nice-ET\\ThirdParty\\Google.Protobuf\\Google.Protobuf.csproj": {
+                "projectPath": "C:\\Users\\Justin\\Documents\\u3dWorkspace\\NICE_Framework\\Nice-ET\\ThirdParty\\Google.Protobuf\\Google.Protobuf.csproj"
+              },
+              "C:\\Users\\Justin\\Documents\\u3dWorkspace\\NICE_Framework\\Nice-ET\\ThirdParty\\KcpLib\\KcpLib.csproj": {
+                "projectPath": "C:\\Users\\Justin\\Documents\\u3dWorkspace\\NICE_Framework\\Nice-ET\\ThirdParty\\KcpLib\\KcpLib.csproj"
+              },
+              "C:\\Users\\Justin\\Documents\\u3dWorkspace\\NICE_Framework\\Nice-ET\\ThirdParty\\ShareLib\\ShareLib.csproj": {
+                "projectPath": "C:\\Users\\Justin\\Documents\\u3dWorkspace\\NICE_Framework\\Nice-ET\\ThirdParty\\ShareLib\\ShareLib.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Justin\\Documents\\u3dWorkspace\\NICE_Framework\\Nice-ET\\ThirdParty\\Google.Protobuf\\Google.Protobuf.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Justin\\Documents\\u3dWorkspace\\NICE_Framework\\Nice-ET\\ThirdParty\\Google.Protobuf\\Google.Protobuf.csproj",
+        "projectName": "Google.Protobuf",
+        "projectPath": "C:\\Users\\Justin\\Documents\\u3dWorkspace\\NICE_Framework\\Nice-ET\\ThirdParty\\Google.Protobuf\\Google.Protobuf.csproj",
+        "packagesPath": "C:\\Users\\Justin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Justin\\Documents\\u3dWorkspace\\NICE_Framework\\Nice-ET\\ThirdParty\\Google.Protobuf\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Justin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "MongoDB.Bson": {
+              "target": "Package",
+              "version": "[2.11.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Justin\\Documents\\u3dWorkspace\\NICE_Framework\\Nice-ET\\ThirdParty\\KcpLib\\KcpLib.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Justin\\Documents\\u3dWorkspace\\NICE_Framework\\Nice-ET\\ThirdParty\\KcpLib\\KcpLib.csproj",
+        "projectName": "KcpLib",
+        "projectPath": "C:\\Users\\Justin\\Documents\\u3dWorkspace\\NICE_Framework\\Nice-ET\\ThirdParty\\KcpLib\\KcpLib.csproj",
+        "packagesPath": "C:\\Users\\Justin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Justin\\Documents\\u3dWorkspace\\NICE_Framework\\Nice-ET\\ThirdParty\\KcpLib\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Justin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Justin\\Documents\\u3dWorkspace\\NICE_Framework\\Nice-ET\\ThirdParty\\ShareLib\\ShareLib.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Justin\\Documents\\u3dWorkspace\\NICE_Framework\\Nice-ET\\ThirdParty\\ShareLib\\ShareLib.csproj",
+        "projectName": "ShareLib",
+        "projectPath": "C:\\Users\\Justin\\Documents\\u3dWorkspace\\NICE_Framework\\Nice-ET\\ThirdParty\\ShareLib\\ShareLib.csproj",
+        "packagesPath": "C:\\Users\\Justin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Justin\\Documents\\u3dWorkspace\\NICE_Framework\\Nice-ET\\ThirdParty\\ShareLib\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Justin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "CommandLineParser": {
+              "target": "Package",
+              "version": "[2.8.0, )"
+            },
+            "Microsoft.CodeAnalysis.Scripting": {
+              "target": "Package",
+              "version": "[3.6.0, )"
+            },
+            "MongoDB.Bson": {
+              "target": "Package",
+              "version": "[2.11.0, )"
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.11.0, )"
+            },
+            "MongoDB.Driver.Core": {
+              "target": "Package",
+              "version": "[2.11.0, )"
+            },
+            "MongoDB.Driver.GridFS": {
+              "target": "Package",
+              "version": "[2.11.0, )"
+            },
+            "NLog": {
+              "target": "Package",
+              "version": "[4.7.3, )"
+            },
+            "SharpZipLib": {
+              "target": "Package",
+              "version": "[1.2.0, )"
             }
           },
           "imports": [
