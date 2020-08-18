@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using ICSharpCode.SharpZipLib.Core;
 using MongoDB.Bson;
+using NiceET;
 using NPOI.SS.UserModel;
 using NPOI.XSSF.UserModel;
 
@@ -12,6 +14,7 @@ namespace ExcelExporter
     {
         private const string ExcelPath = "../Excel";
         private const string JsonPath = "../output_json";
+        private const string IdlPath = "../output_idl";
 
         private List<string> ignoreFiles = new List<string>()
         {
@@ -28,13 +31,35 @@ namespace ExcelExporter
             {
                 ExportAll(JsonPath);
 
-                ExportAllIDLS(@"../output_idl");
+                ExportAllIDLS(IdlPath);
+
+                ExportData();
 
                 Console.WriteLine($"导出服务端配置完成!");
             }
             catch(Exception e)
             {
                 Console.WriteLine(e);
+            }
+            
+        }
+
+        private void ExportData()
+        {
+            string exePath = Path.GetFullPath("../");
+
+            foreach (string filePath in Directory.GetFiles(JsonPath))
+            {
+                string fileName = Path.GetFileNameWithoutExtension(filePath);
+                string argvB      = $"-b -o output_bin output_idl/{fileName}.fbs  output_json/{fileName}.txt";
+                string argvCsharp = $"-n --gen-onefile  -o output_csharp output_idl/{fileName}.fbs  output_json/{fileName}.txt";
+                string argvLua    = $"-l -o output_lua output_idl/{fileName}.fbs  output_json/{fileName}.txt";
+                
+                ProcessHelper.Run( $"{exePath}/flatc.exe",  argvB,  exePath);
+                ProcessHelper.Run( $"{exePath}/flatc.exe", argvCsharp,  exePath);
+                ProcessHelper.Run( $"{exePath}/flatc.exe", argvLua,  exePath);
+
+                Console.WriteLine(argvB);
             }
             
         }
