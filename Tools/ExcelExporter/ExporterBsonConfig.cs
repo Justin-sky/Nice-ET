@@ -3,39 +3,30 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using MongoDB.Bson;
-using NiceET;
 using NPOI.SS.UserModel;
 using NPOI.XSSF.UserModel;
 
 namespace ExcelExporter
 {
-
-
-
     public class ExporterBsonConfig
     {
-        private const string ExcelPath = "../../../Excel";
+        private const string ExcelPath = "../Excel";
         private const string ServerConfigPath = "../../../Config/";
 
-        private bool isClient = false;
-
-        private ExcelMD5Info md5Info;
 
         public void ExportBsonConfig()
         {
             try
             {
-                this.isClient = false;
-
                 ExportAll(ServerConfigPath);
 
                 ExportAllClass(@"../../../Model/Config", "using MongoDB.Bson.Serialization.Attributes;\n\nnamespace NiceET\n{\n");
 
-                Log.Info($"导出服务端配置完成!");
+                Console.WriteLine($"导出服务端配置完成!");
             }
             catch(Exception e)
             {
-                Log.Error(e);
+                Console.WriteLine(e);
             }
             
         }
@@ -55,7 +46,7 @@ namespace ExcelExporter
                 }
 
                 ExportClass(filePath, exportDir, csHead);
-                Log.Info($"生成{Path.GetFileName(filePath)}类");
+                Console.WriteLine($"生成{Path.GetFileName(filePath)}类");
             }
 
      
@@ -94,31 +85,25 @@ namespace ExcelExporter
                 sb.Append("\t\t[BsonId]\n");
                 sb.Append("\t\tpublic long Id { get; set; }\n");
 
-                int cellCount = sheet.GetRow(3).LastCellNum;
+                int cellCount = sheet.GetRow(0).LastCellNum;
 
-                for (int i = 2; i < cellCount; i++)
+                for (int i = 0; i < cellCount; i++)
                 {
-                    string fieldDesc = ExcelHelper.GetCellString(sheet, 2, i);
+                    string fieldDesc = ExcelHelper.GetCellString(sheet, 0, i);
 
                     if (fieldDesc.StartsWith("#"))
                     {
                         continue;
                     }
 
-                    // s开头表示这个字段是服务端专用
-                    if (fieldDesc.StartsWith("s") && this.isClient)
-                    {
-                        continue;
-                    }
-
-                    string fieldName = ExcelHelper.GetCellString(sheet, 3, i);
+                    string fieldName = ExcelHelper.GetCellString(sheet, 1, i);
 
                     if (fieldName == "Id" || fieldName == "_id")
                     {
                         continue;
                     }
 
-                    string fieldType = ExcelHelper.GetCellString(sheet, 4, i);
+                    string fieldType = ExcelHelper.GetCellString(sheet, 2, i);
                     if (fieldType == "" || fieldName == "")
                     {
                         continue;
@@ -136,15 +121,7 @@ namespace ExcelExporter
 
         private void ExportAll(string exportDir)
         {
-            string md5File = Path.Combine(ExcelPath, "md5.txt");
-            if (!File.Exists(md5File))
-            {
-                this.md5Info = new ExcelMD5Info();
-            }
-            else
-            {
-                this.md5Info = MongoHelper.FromJson<ExcelMD5Info>(File.ReadAllText(md5File));
-            }
+
 
             foreach (string filePath in Directory.GetFiles(ExcelPath))
             {
@@ -158,21 +135,13 @@ namespace ExcelExporter
                     continue;
                 }
 
-                string fileName = Path.GetFileName(filePath);
-                string oldMD5 = this.md5Info.Get(fileName);
-                string md5 = MD5Helper.FileMD5(filePath);
-                this.md5Info.Add(fileName, md5);
-                // if (md5 == oldMD5)
-                // {
-                // 	continue;
-                // }
+           
 
                 Export(filePath, exportDir);
             }
 
-            File.WriteAllText(md5File, this.md5Info.ToJson());
 
-            Log.Info("所有表导表完成");
+            Console.WriteLine("所有表导表完成");
       
         }
 
@@ -185,7 +154,7 @@ namespace ExcelExporter
             }
 
             string protoName = Path.GetFileNameWithoutExtension(fileName);
-            Log.Info($"{protoName}导表开始");
+            Console.WriteLine($"{protoName}导表开始");
             string exportPath = Path.Combine(exportDir, $"{protoName}.txt");
             using (FileStream txt = new FileStream(exportPath, FileMode.Create))
             using (StreamWriter sw = new StreamWriter(txt))
@@ -199,24 +168,24 @@ namespace ExcelExporter
                 sw.WriteLine(']');
             }
 
-            Log.Info($"{protoName}导表完成");
+            Console.WriteLine($"{protoName}导表完成");
         }
 
         private void ExportSheet(ISheet sheet, StreamWriter sw)
         {
-            int cellCount = sheet.GetRow(3).LastCellNum;
+            int cellCount = sheet.GetRow(0).LastCellNum;
 
             CellInfo[] cellInfos = new CellInfo[cellCount];
 
-            for (int i = 2; i < cellCount; i++)
+            for (int i = 0; i < cellCount; i++)
             {
-                string fieldDesc = ExcelHelper.GetCellString(sheet, 2, i);
-                string fieldName = ExcelHelper.GetCellString(sheet, 3, i);
-                string fieldType = ExcelHelper.GetCellString(sheet, 4, i);
+                string fieldDesc = ExcelHelper.GetCellString(sheet, 0, i);
+                string fieldName = ExcelHelper.GetCellString(sheet, 1, i);
+                string fieldType = ExcelHelper.GetCellString(sheet, 2, i);
                 cellInfos[i] = new CellInfo() { Name = fieldName, Type = fieldType, Desc = fieldDesc };
             }
 
-            for (int i = 5; i <= sheet.LastRowNum; ++i)
+            for (int i = 3; i <= sheet.LastRowNum; ++i)
             {
                 if (ExcelHelper.GetCellString(sheet, i, 2) == "")
                 {
@@ -225,25 +194,8 @@ namespace ExcelExporter
 
                 StringBuilder sb = new StringBuilder();
                 IRow row = sheet.GetRow(i);
-                for (int j = 2; j < cellCount; ++j)
+                for (int j = 0; j < cellCount; ++j)
                 {
-                    string desc = cellInfos[j].Desc.ToLower();
-                    if (desc.StartsWith("#"))
-                    {
-                        continue;
-                    }
-
-                    // s开头表示这个字段是服务端专用
-                    if (desc.StartsWith("s") && this.isClient)
-                    {
-                        continue;
-                    }
-
-                    // c开头表示这个字段是客户端专用
-                    if (desc.StartsWith("c") && !this.isClient)
-                    {
-                        continue;
-                    }
 
                     string fieldValue = ExcelHelper.GetCellString(row, j);
                     if (fieldValue == "")
@@ -251,7 +203,7 @@ namespace ExcelExporter
                         continue;
                     }
 
-                    if (j > 2)
+                    if (j > 0)
                     {
                         sb.Append(",");
                     }

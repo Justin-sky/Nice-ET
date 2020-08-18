@@ -308,3 +308,12 @@ C:\Users\Justin\Documents\u3dWorkspace\NICE_Framework\Nice-ET\Tools\ExcelExporte
 C:\Users\Justin\Documents\u3dWorkspace\NICE_Framework\Nice-ET\Tools\ExcelExporter\obj\Debug\ExcelExporter.dll
 C:\Users\Justin\Documents\u3dWorkspace\NICE_Framework\Nice-ET\Tools\ExcelExporter\obj\Debug\ExcelExporter.pdb
 C:\Users\Justin\Documents\u3dWorkspace\NICE_Framework\Nice-ET\Tools\ExcelExporter\obj\Debug\ExcelExporter.genruntimeconfig.cache
+C:\Users\Justin\Documents\u3dWorkspace\NICE_Framework\Nice-ET\Tools\Flatbuffer\ExcelExporter\snappy32.dll
+C:\Users\Justin\Documents\u3dWorkspace\NICE_Framework\Nice-ET\Tools\Flatbuffer\ExcelExporter\snappy64.dll
+C:\Users\Justin\Documents\u3dWorkspace\NICE_Framework\Nice-ET\Tools\Flatbuffer\ExcelExporter\libzstd.dll
+C:\Users\Justin\Documents\u3dWorkspace\NICE_Framework\Nice-ET\Tools\Flatbuffer\ExcelExporter\ExcelExporter.exe
+C:\Users\Justin\Documents\u3dWorkspace\NICE_Framework\Nice-ET\Tools\Flatbuffer\ExcelExporter\ExcelExporter.deps.json
+C:\Users\Justin\Documents\u3dWorkspace\NICE_Framework\Nice-ET\Tools\Flatbuffer\ExcelExporter\ExcelExporter.runtimeconfig.json
+C:\Users\Justin\Documents\u3dWorkspace\NICE_Framework\Nice-ET\Tools\Flatbuffer\ExcelExporter\ExcelExporter.runtimeconfig.dev.json
+C:\Users\Justin\Documents\u3dWorkspace\NICE_Framework\Nice-ET\Tools\Flatbuffer\ExcelExporter\ExcelExporter.dll
+C:\Users\Justin\Documents\u3dWorkspace\NICE_Framework\Nice-ET\Tools\Flatbuffer\ExcelExporter\ExcelExporter.pdb

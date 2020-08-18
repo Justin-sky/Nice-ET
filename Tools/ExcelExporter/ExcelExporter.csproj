@@ -7,13 +7,16 @@
   <PropertyGroup>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>../Flatbuffer/ExcelExporter</OutputPath>
+  </PropertyGroup>
   
   <ItemGroup>
     <PackageReference Include="DotNetCore.NPOI" Version="1.2.2" />
   </ItemGroup>
   
   <ItemGroup>
-    <ProjectReference Include="..\..\Model\Model.csproj" />
+    <ProjectReference Include="..\..\ThirdParty\ShareLib\ShareLib.csproj" />
   </ItemGroup>
 
 </Project>

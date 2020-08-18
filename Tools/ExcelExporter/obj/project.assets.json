@@ -1751,44 +1751,6 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
-      "Google.Protobuf/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
-        "dependencies": {
-          "MongoDB.Bson": "2.11.0"
-        },
-        "compile": {
-          "bin/placeholder/Google.Protobuf.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Google.Protobuf.dll": {}
-        }
-      },
-      "KcpLib/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
-        "compile": {
-          "bin/placeholder/KcpLib.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/KcpLib.dll": {}
-        }
-      },
-      "Model/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
-        "dependencies": {
-          "Google.Protobuf": "1.0.0",
-          "KcpLib": "1.0.0",
-          "ShareLib": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Model.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Model.dll": {}
-        }
-      },
       "ShareLib/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -5983,21 +5945,6 @@
         "system.xml.xdocument.nuspec"
       ]
     },
-    "Google.Protobuf/1.0.0": {
-      "type": "project",
-      "path": "../../ThirdParty/Google.Protobuf/Google.Protobuf.csproj",
-      "msbuildProject": "../../ThirdParty/Google.Protobuf/Google.Protobuf.csproj"
-    },
-    "KcpLib/1.0.0": {
-      "type": "project",
-      "path": "../../ThirdParty/KcpLib/KcpLib.csproj",
-      "msbuildProject": "../../ThirdParty/KcpLib/KcpLib.csproj"
-    },
-    "Model/1.0.0": {
-      "type": "project",
-      "path": "../../Model/Model.csproj",
-      "msbuildProject": "../../Model/Model.csproj"
-    },
     "ShareLib/1.0.0": {
       "type": "project",
       "path": "../../ThirdParty/ShareLib/ShareLib.csproj",
@@ -6007,7 +5954,7 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "DotNetCore.NPOI >= 1.2.2",
-      "Model >= 1.0.0"
+      "ShareLib >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -6040,8 +5987,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\Justin\\Documents\\u3dWorkspace\\NICE_Framework\\Nice-ET\\Model\\Model.csproj": {
-              "projectPath": "C:\\Users\\Justin\\Documents\\u3dWorkspace\\NICE_Framework\\Nice-ET\\Model\\Model.csproj"
+            "C:\\Users\\Justin\\Documents\\u3dWorkspace\\NICE_Framework\\Nice-ET\\ThirdParty\\ShareLib\\ShareLib.csproj": {
+              "projectPath": "C:\\Users\\Justin\\Documents\\u3dWorkspace\\NICE_Framework\\Nice-ET\\ThirdParty\\ShareLib\\ShareLib.csproj"
             }
           }
         }
