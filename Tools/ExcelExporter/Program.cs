@@ -11,8 +11,9 @@ namespace ExcelExporter
             ExporterBsonConfig bsonExporter = new ExporterBsonConfig();
             bsonExporter.ExportBsonConfig();
 
-            //ExporterJsonConifg jsonExporter = new ExporterJsonConifg();
-            //jsonExporter.ExportJsonConfig();
+            //生成Json数据， 用于转换flatbuffer
+            ExporterJsonConfig jsonExporter = new ExporterJsonConfig();
+            jsonExporter.ExportJsonConfig();
 
         }
     }

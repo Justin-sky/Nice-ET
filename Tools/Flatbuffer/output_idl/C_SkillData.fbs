@@ -1,0 +1,29 @@
+namespace fb; 
+table C_SkillDataTB
+{
+	 C_SkillDataTRS:[C_SkillDataTR];
+}
+
+table C_SkillDataTR
+{
+	 _id:int;
+	 Name:string;
+	 Description:string;
+	 CoolTime:int;
+	 CostSP:int;
+	 AttackDistance:float;
+	 AttackAngle:float;
+	 AttackTargetTags:[string];
+	 ImpactType:[string];
+	 NextBattlerId:int;
+	 AtkRatio:float;
+	 DurationTime:float;
+	 AtkInterval:float;
+	 SkillPrefab:string;
+	 AnimationName:string;
+	 HitFxPrefab:string;
+	 Level:int;
+	 AttackType:int;
+	 SelectorType:int;
+}
+root_type C_SkillDataTB;

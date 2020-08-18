@@ -7,3 +7,5 @@ cd ProtoCS
 Proto2Cs.exe
 cd ..
 
+pause
+

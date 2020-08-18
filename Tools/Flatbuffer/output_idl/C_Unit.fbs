@@ -1,0 +1,16 @@
+namespace fb; 
+table C_UnitTB
+{
+	 C_UnitTRS:[C_UnitTR];
+}
+
+table C_UnitTR
+{
+	 _id:int;
+	 BaseATK:float;
+	 SP:float;
+	 HP:float;
+	 AttackDistance:float;
+	 AttackInterval:float;
+}
+root_type C_UnitTB;
