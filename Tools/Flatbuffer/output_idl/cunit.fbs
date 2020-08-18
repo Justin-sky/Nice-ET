@@ -1,0 +1,16 @@
+namespace fb; 
+table cunitTB
+{
+	 cunittrs:[cunitTR];
+}
+
+table cunitTR
+{
+	 _id:int;
+	 baseatk:float;
+	 sp:float;
+	 hp:float;
+	 attackdistance:float;
+	 attackinterval:float;
+}
+root_type cunitTB;

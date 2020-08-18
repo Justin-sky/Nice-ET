@@ -73,9 +73,10 @@ namespace ExcelExporter
                 xssfWorkbook = new XSSFWorkbook(file);
             }
 
-            string protoName = Path.GetFileNameWithoutExtension(fileName);
+            string protoName = Path.GetFileNameWithoutExtension(fileName).ToLower();
 
             string exportPath = Path.Combine(exportDir, $"{protoName}.fbs");
+
             using (FileStream txt = new FileStream(exportPath, FileMode.Create))
             using (StreamWriter sw = new StreamWriter(txt))
             {
@@ -87,7 +88,7 @@ namespace ExcelExporter
                 //gen TB
                 sb.Append($"table {protoName}TB\n");
                 sb.Append("{\n");
-                sb.Append($"\t {protoName}TRS:[{protoName}TR];\n");
+                sb.Append($"\t {protoName}trs:[{protoName}TR];\n");
                 sb.Append("}\n\n"); //end TB
 
                 //gen TR
@@ -105,7 +106,7 @@ namespace ExcelExporter
                         continue;
                     }
 
-                    string fieldName = ExcelHelper.GetCellString(sheet, 1, i);
+                    string fieldName = ExcelHelper.GetCellString(sheet, 1, i).ToLower();
 
 
                     string fieldType = ExcelHelper.GetCellString(sheet, 2, i);
@@ -188,14 +189,15 @@ namespace ExcelExporter
                 xssfWorkbook = new XSSFWorkbook(file);
             }
 
-            string protoName = Path.GetFileNameWithoutExtension(fileName);
+            string protoName = Path.GetFileNameWithoutExtension(fileName).ToLower();
+
             Console.WriteLine($"{protoName}导表开始");
             string exportPath = Path.Combine(exportDir, $"{protoName}.txt");
             using (FileStream txt = new FileStream(exportPath, FileMode.Create))
             using (StreamWriter sw = new StreamWriter(txt))
             {
                 sw.WriteLine('{');
-                sw.WriteLine($"\"{protoName}TRS\":[");
+                sw.WriteLine($"\"{protoName}trs\":[");
                 for (int i = 0; i < xssfWorkbook.NumberOfSheets; ++i)
                 {
                     ISheet sheet = xssfWorkbook.GetSheetAt(i);
@@ -248,7 +250,7 @@ namespace ExcelExporter
                         sb.Append(",");
                     }
 
-                    string fieldName = cellInfos[j].Name;
+                    string fieldName = cellInfos[j].Name.ToLower();
 
                     string fieldType = cellInfos[j].Type;
                     sb.Append($"\"{fieldName}\":{Convert(fieldType, fieldValue)}");

@@ -1,16 +1,16 @@
 namespace fb; 
-table UnitConfigTB
+table unitconfigTB
 {
-	 UnitConfigTRS:[UnitConfigTR];
+	 unitconfigtrs:[unitconfigTR];
 }
 
-table UnitConfigTR
+table unitconfigTR
 {
 	 _id:int;
-	 Name:string;
-	 Desc:string;
-	 Position:int;
-	 Height:int;
-	 Weight:int;
+	 name:string;
+	 desc:string;
+	 position:int;
+	 height:int;
+	 weight:int;
 }
-root_type UnitConfigTB;
+root_type unitconfigTB;
