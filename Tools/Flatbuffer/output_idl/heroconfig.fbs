@@ -1,16 +1,16 @@
 namespace fb; 
-table cunitTB
+table heroconfigTB
 {
-	 cunittrs:[cunitTR];
+	 heroconfigTRS:[heroconfigTR];
 }
 
-table cunitTR
+table heroconfigTR
 {
-	 _id:int;
+	 _id:int(key);
 	 baseatk:float;
 	 sp:float;
 	 hp:float;
 	 attackdistance:float;
 	 attackinterval:float;
 }
-root_type cunitTB;
+root_type heroconfigTB;

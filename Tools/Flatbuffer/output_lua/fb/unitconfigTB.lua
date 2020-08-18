@@ -21,7 +21,7 @@ end
 function unitconfigTB_mt:Init(buf, pos)
     self.view = flatbuffers.view.New(buf, pos)
 end
-function unitconfigTB_mt:Unitconfigtrs(j)
+function unitconfigTB_mt:UnitconfigTRS(j)
     local o = self.view:Offset(4)
     if o ~= 0 then
         local x = self.view:Vector(o)
@@ -32,7 +32,7 @@ function unitconfigTB_mt:Unitconfigtrs(j)
         return obj
     end
 end
-function unitconfigTB_mt:UnitconfigtrsLength()
+function unitconfigTB_mt:UnitconfigTRSLength()
     local o = self.view:Offset(4)
     if o ~= 0 then
         return self.view:VectorLen(o)
@@ -40,8 +40,8 @@ function unitconfigTB_mt:UnitconfigtrsLength()
     return 0
 end
 function unitconfigTB.Start(builder) builder:StartObject(1) end
-function unitconfigTB.AddUnitconfigtrs(builder, unitconfigtrs) builder:PrependUOffsetTRelativeSlot(0, unitconfigtrs, 0) end
-function unitconfigTB.StartUnitconfigtrsVector(builder, numElems) return builder:StartVector(4, numElems, 4) end
+function unitconfigTB.AddUnitconfigTRS(builder, unitconfigTRS) builder:PrependUOffsetTRelativeSlot(0, unitconfigTRS, 0) end
+function unitconfigTB.StartUnitconfigTRSVector(builder, numElems) return builder:StartVector(4, numElems, 4) end
 function unitconfigTB.End(builder) return builder:EndObject() end
 
 return unitconfigTB -- return the module

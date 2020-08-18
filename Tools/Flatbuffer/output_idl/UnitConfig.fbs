@@ -1,12 +1,12 @@
 namespace fb; 
 table unitconfigTB
 {
-	 unitconfigtrs:[unitconfigTR];
+	 unitconfigTRS:[unitconfigTR];
 }
 
 table unitconfigTR
 {
-	 _id:int;
+	 _id:int(key);
 	 name:string;
 	 desc:string;
 	 position:int;

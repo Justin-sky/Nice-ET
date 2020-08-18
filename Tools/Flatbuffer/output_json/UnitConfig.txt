@@ -1,4 +1,4 @@
 {
-"unitconfigtrs":[
+"unitconfigTRS":[
 {"_id":1001,"name":"米克尔","desc":"带有强力攻击技能","position":1,"height":178,"weight":68}
 ]}

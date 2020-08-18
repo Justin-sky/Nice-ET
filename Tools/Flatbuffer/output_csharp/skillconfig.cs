@@ -9,48 +9,49 @@ using global::System;
 using global::System.Collections.Generic;
 using global::FlatBuffers;
 
-public struct cskilldataTB : IFlatbufferObject
+public struct skillconfigTB : IFlatbufferObject
 {
   private Table __p;
   public ByteBuffer ByteBuffer { get { return __p.bb; } }
   public static void ValidateVersion() { FlatBufferConstants.FLATBUFFERS_1_12_0(); }
-  public static cskilldataTB GetRootAscskilldataTB(ByteBuffer _bb) { return GetRootAscskilldataTB(_bb, new cskilldataTB()); }
-  public static cskilldataTB GetRootAscskilldataTB(ByteBuffer _bb, cskilldataTB obj) { return (obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb)); }
+  public static skillconfigTB GetRootAsskillconfigTB(ByteBuffer _bb) { return GetRootAsskillconfigTB(_bb, new skillconfigTB()); }
+  public static skillconfigTB GetRootAsskillconfigTB(ByteBuffer _bb, skillconfigTB obj) { return (obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb)); }
   public void __init(int _i, ByteBuffer _bb) { __p = new Table(_i, _bb); }
-  public cskilldataTB __assign(int _i, ByteBuffer _bb) { __init(_i, _bb); return this; }
+  public skillconfigTB __assign(int _i, ByteBuffer _bb) { __init(_i, _bb); return this; }
 
-  public fb.cskilldataTR? Cskilldatatrs(int j) { int o = __p.__offset(4); return o != 0 ? (fb.cskilldataTR?)(new fb.cskilldataTR()).__assign(__p.__indirect(__p.__vector(o) + j * 4), __p.bb) : null; }
-  public int CskilldatatrsLength { get { int o = __p.__offset(4); return o != 0 ? __p.__vector_len(o) : 0; } }
+  public fb.skillconfigTR? SkillconfigTRS(int j) { int o = __p.__offset(4); return o != 0 ? (fb.skillconfigTR?)(new fb.skillconfigTR()).__assign(__p.__indirect(__p.__vector(o) + j * 4), __p.bb) : null; }
+  public int SkillconfigTRSLength { get { int o = __p.__offset(4); return o != 0 ? __p.__vector_len(o) : 0; } }
+  public fb.skillconfigTR? SkillconfigTRSByKey(int key) { int o = __p.__offset(4); return o != 0 ? fb.skillconfigTR.__lookup_by_key(__p.__vector(o), key, __p.bb) : null; }
 
-  public static Offset<fb.cskilldataTB> CreatecskilldataTB(FlatBufferBuilder builder,
-      VectorOffset cskilldatatrsOffset = default(VectorOffset)) {
+  public static Offset<fb.skillconfigTB> CreateskillconfigTB(FlatBufferBuilder builder,
+      VectorOffset skillconfigTRSOffset = default(VectorOffset)) {
     builder.StartTable(1);
-    cskilldataTB.AddCskilldatatrs(builder, cskilldatatrsOffset);
-    return cskilldataTB.EndcskilldataTB(builder);
+    skillconfigTB.AddSkillconfigTRS(builder, skillconfigTRSOffset);
+    return skillconfigTB.EndskillconfigTB(builder);
   }
 
-  public static void StartcskilldataTB(FlatBufferBuilder builder) { builder.StartTable(1); }
-  public static void AddCskilldatatrs(FlatBufferBuilder builder, VectorOffset cskilldatatrsOffset) { builder.AddOffset(0, cskilldatatrsOffset.Value, 0); }
-  public static VectorOffset CreateCskilldatatrsVector(FlatBufferBuilder builder, Offset<fb.cskilldataTR>[] data) { builder.StartVector(4, data.Length, 4); for (int i = data.Length - 1; i >= 0; i--) builder.AddOffset(data[i].Value); return builder.EndVector(); }
-  public static VectorOffset CreateCskilldatatrsVectorBlock(FlatBufferBuilder builder, Offset<fb.cskilldataTR>[] data) { builder.StartVector(4, data.Length, 4); builder.Add(data); return builder.EndVector(); }
-  public static void StartCskilldatatrsVector(FlatBufferBuilder builder, int numElems) { builder.StartVector(4, numElems, 4); }
-  public static Offset<fb.cskilldataTB> EndcskilldataTB(FlatBufferBuilder builder) {
+  public static void StartskillconfigTB(FlatBufferBuilder builder) { builder.StartTable(1); }
+  public static void AddSkillconfigTRS(FlatBufferBuilder builder, VectorOffset skillconfigTRSOffset) { builder.AddOffset(0, skillconfigTRSOffset.Value, 0); }
+  public static VectorOffset CreateSkillconfigTRSVector(FlatBufferBuilder builder, Offset<fb.skillconfigTR>[] data) { builder.StartVector(4, data.Length, 4); for (int i = data.Length - 1; i >= 0; i--) builder.AddOffset(data[i].Value); return builder.EndVector(); }
+  public static VectorOffset CreateSkillconfigTRSVectorBlock(FlatBufferBuilder builder, Offset<fb.skillconfigTR>[] data) { builder.StartVector(4, data.Length, 4); builder.Add(data); return builder.EndVector(); }
+  public static void StartSkillconfigTRSVector(FlatBufferBuilder builder, int numElems) { builder.StartVector(4, numElems, 4); }
+  public static Offset<fb.skillconfigTB> EndskillconfigTB(FlatBufferBuilder builder) {
     int o = builder.EndTable();
-    return new Offset<fb.cskilldataTB>(o);
+    return new Offset<fb.skillconfigTB>(o);
   }
-  public static void FinishcskilldataTBBuffer(FlatBufferBuilder builder, Offset<fb.cskilldataTB> offset) { builder.Finish(offset.Value); }
-  public static void FinishSizePrefixedcskilldataTBBuffer(FlatBufferBuilder builder, Offset<fb.cskilldataTB> offset) { builder.FinishSizePrefixed(offset.Value); }
+  public static void FinishskillconfigTBBuffer(FlatBufferBuilder builder, Offset<fb.skillconfigTB> offset) { builder.Finish(offset.Value); }
+  public static void FinishSizePrefixedskillconfigTBBuffer(FlatBufferBuilder builder, Offset<fb.skillconfigTB> offset) { builder.FinishSizePrefixed(offset.Value); }
 };
 
-public struct cskilldataTR : IFlatbufferObject
+public struct skillconfigTR : IFlatbufferObject
 {
   private Table __p;
   public ByteBuffer ByteBuffer { get { return __p.bb; } }
   public static void ValidateVersion() { FlatBufferConstants.FLATBUFFERS_1_12_0(); }
-  public static cskilldataTR GetRootAscskilldataTR(ByteBuffer _bb) { return GetRootAscskilldataTR(_bb, new cskilldataTR()); }
-  public static cskilldataTR GetRootAscskilldataTR(ByteBuffer _bb, cskilldataTR obj) { return (obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb)); }
+  public static skillconfigTR GetRootAsskillconfigTR(ByteBuffer _bb) { return GetRootAsskillconfigTR(_bb, new skillconfigTR()); }
+  public static skillconfigTR GetRootAsskillconfigTR(ByteBuffer _bb, skillconfigTR obj) { return (obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb)); }
   public void __init(int _i, ByteBuffer _bb) { __p = new Table(_i, _bb); }
-  public cskilldataTR __assign(int _i, ByteBuffer _bb) { __init(_i, _bb); return this; }
+  public skillconfigTR __assign(int _i, ByteBuffer _bb) { __init(_i, _bb); return this; }
 
   public int _id { get { int o = __p.__offset(4); return o != 0 ? __p.bb.GetInt(o + __p.bb_pos) : (int)0; } }
   public string Name { get { int o = __p.__offset(6); return o != 0 ? __p.__string(o + __p.bb_pos) : null; } }
@@ -104,7 +105,7 @@ public struct cskilldataTR : IFlatbufferObject
   public int Attacktype { get { int o = __p.__offset(38); return o != 0 ? __p.bb.GetInt(o + __p.bb_pos) : (int)0; } }
   public int Selectortype { get { int o = __p.__offset(40); return o != 0 ? __p.bb.GetInt(o + __p.bb_pos) : (int)0; } }
 
-  public static Offset<fb.cskilldataTR> CreatecskilldataTR(FlatBufferBuilder builder,
+  public static Offset<fb.skillconfigTR> CreateskillconfigTR(FlatBufferBuilder builder,
       int _id = 0,
       StringOffset nameOffset = default(StringOffset),
       StringOffset descriptionOffset = default(StringOffset),
@@ -125,29 +126,29 @@ public struct cskilldataTR : IFlatbufferObject
       int attacktype = 0,
       int selectortype = 0) {
     builder.StartTable(19);
-    cskilldataTR.AddSelectortype(builder, selectortype);
-    cskilldataTR.AddAttacktype(builder, attacktype);
-    cskilldataTR.AddLevel(builder, level);
-    cskilldataTR.AddHitfxprefab(builder, hitfxprefabOffset);
-    cskilldataTR.AddAnimationname(builder, animationnameOffset);
-    cskilldataTR.AddSkillprefab(builder, skillprefabOffset);
-    cskilldataTR.AddAtkinterval(builder, atkinterval);
-    cskilldataTR.AddDurationtime(builder, durationtime);
-    cskilldataTR.AddAtkratio(builder, atkratio);
-    cskilldataTR.AddNextbattlerid(builder, nextbattlerid);
-    cskilldataTR.AddImpacttype(builder, impacttypeOffset);
-    cskilldataTR.AddAttacktargettags(builder, attacktargettagsOffset);
-    cskilldataTR.AddAttackangle(builder, attackangle);
-    cskilldataTR.AddAttackdistance(builder, attackdistance);
-    cskilldataTR.AddCostsp(builder, costsp);
-    cskilldataTR.AddCooltime(builder, cooltime);
-    cskilldataTR.AddDescription(builder, descriptionOffset);
-    cskilldataTR.AddName(builder, nameOffset);
-    cskilldataTR.Add_id(builder, _id);
-    return cskilldataTR.EndcskilldataTR(builder);
+    skillconfigTR.AddSelectortype(builder, selectortype);
+    skillconfigTR.AddAttacktype(builder, attacktype);
+    skillconfigTR.AddLevel(builder, level);
+    skillconfigTR.AddHitfxprefab(builder, hitfxprefabOffset);
+    skillconfigTR.AddAnimationname(builder, animationnameOffset);
+    skillconfigTR.AddSkillprefab(builder, skillprefabOffset);
+    skillconfigTR.AddAtkinterval(builder, atkinterval);
+    skillconfigTR.AddDurationtime(builder, durationtime);
+    skillconfigTR.AddAtkratio(builder, atkratio);
+    skillconfigTR.AddNextbattlerid(builder, nextbattlerid);
+    skillconfigTR.AddImpacttype(builder, impacttypeOffset);
+    skillconfigTR.AddAttacktargettags(builder, attacktargettagsOffset);
+    skillconfigTR.AddAttackangle(builder, attackangle);
+    skillconfigTR.AddAttackdistance(builder, attackdistance);
+    skillconfigTR.AddCostsp(builder, costsp);
+    skillconfigTR.AddCooltime(builder, cooltime);
+    skillconfigTR.AddDescription(builder, descriptionOffset);
+    skillconfigTR.AddName(builder, nameOffset);
+    skillconfigTR.Add_id(builder, _id);
+    return skillconfigTR.EndskillconfigTR(builder);
   }
 
-  public static void StartcskilldataTR(FlatBufferBuilder builder) { builder.StartTable(19); }
+  public static void StartskillconfigTR(FlatBufferBuilder builder) { builder.StartTable(19); }
   public static void Add_id(FlatBufferBuilder builder, int Id) { builder.AddInt(0, Id, 0); }
   public static void AddName(FlatBufferBuilder builder, StringOffset nameOffset) { builder.AddOffset(1, nameOffset.Value, 0); }
   public static void AddDescription(FlatBufferBuilder builder, StringOffset descriptionOffset) { builder.AddOffset(2, descriptionOffset.Value, 0); }
@@ -173,9 +174,34 @@ public struct cskilldataTR : IFlatbufferObject
   public static void AddLevel(FlatBufferBuilder builder, int level) { builder.AddInt(16, level, 0); }
   public static void AddAttacktype(FlatBufferBuilder builder, int attacktype) { builder.AddInt(17, attacktype, 0); }
   public static void AddSelectortype(FlatBufferBuilder builder, int selectortype) { builder.AddInt(18, selectortype, 0); }
-  public static Offset<fb.cskilldataTR> EndcskilldataTR(FlatBufferBuilder builder) {
+  public static Offset<fb.skillconfigTR> EndskillconfigTR(FlatBufferBuilder builder) {
     int o = builder.EndTable();
-    return new Offset<fb.cskilldataTR>(o);
+    return new Offset<fb.skillconfigTR>(o);
+  }
+
+  public static VectorOffset CreateSortedVectorOfskillconfigTR(FlatBufferBuilder builder, Offset<skillconfigTR>[] offsets) {
+    Array.Sort(offsets, (Offset<skillconfigTR> o1, Offset<skillconfigTR> o2) => builder.DataBuffer.GetInt(Table.__offset(4, o1.Value, builder.DataBuffer)).CompareTo(builder.DataBuffer.GetInt(Table.__offset(4, o2.Value, builder.DataBuffer))));
+    return builder.CreateVectorOfTables(offsets);
+  }
+
+  public static skillconfigTR? __lookup_by_key(int vectorLocation, int key, ByteBuffer bb) {
+    int span = bb.GetInt(vectorLocation - 4);
+    int start = 0;
+    while (span != 0) {
+      int middle = span / 2;
+      int tableOffset = Table.__indirect(vectorLocation + 4 * (start + middle), bb);
+      int comp = bb.GetInt(Table.__offset(4, bb.Length - tableOffset, bb)).CompareTo(key);
+      if (comp > 0) {
+        span = middle;
+      } else if (comp < 0) {
+        middle++;
+        start += middle;
+        span -= middle;
+      } else {
+        return new skillconfigTR().__assign(tableOffset, bb);
+      }
+    }
+    return null;
   }
 };
 

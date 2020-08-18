@@ -1,5 +1,5 @@
 {
-"cskilldatatrs":[
+"skillconfigTRS":[
 {"_id":1001,"name":"降龙十八掌","description":"带有强力攻击技能","cooltime":10,"costsp":178,"attackdistance":1,"attackangle":30,"attacktargettags":["Enemy"],"impacttype":["CostSP", "Damage"],"nextbattlerid":0,"atkratio":2,"durationtime":2,"atkinterval":1,"skillprefab":"Effect/Prefab/UI/ef_ui_TaskFinish.prefab","animationname":"skill1","hitfxprefab":"Effect/Prefab/UI/ef_ui_TaskFinish.prefab","level":1,"attacktype":1,"selectortype":1}
 ,{"_id":1002,"name":"暴雨梨花","description":"带有强力攻击技能","cooltime":10,"costsp":178,"attackdistance":1,"attackangle":30,"attacktargettags":["Enemy"],"impacttype":["CostSP", "Damage"],"nextbattlerid":0,"atkratio":2,"durationtime":2,"atkinterval":1,"skillprefab":"Effect/Prefab/UI/ef_ui_TaskFinish.prefab","animationname":"skill2","hitfxprefab":"Effect/Prefab/UI/ef_ui_TaskFinish.prefab","level":1,"attacktype":1,"selectortype":1}
 ,{"_id":1003,"name":"排山倒海","description":"带有强力攻击技能","cooltime":10,"costsp":178,"attackdistance":1,"attackangle":30,"attacktargettags":["Enemy"],"impacttype":["CostSP", "Damage"],"nextbattlerid":0,"atkratio":2,"durationtime":2,"atkinterval":1,"skillprefab":"Effect/Prefab/UI/ef_ui_TaskFinish.prefab","animationname":"skill3","hitfxprefab":"Effect/Prefab/UI/ef_ui_TaskFinish.prefab","level":1,"attacktype":1,"selectortype":1}

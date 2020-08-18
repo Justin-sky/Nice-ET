@@ -1,12 +1,12 @@
 namespace fb; 
-table cskilldataTB
+table skillconfigTB
 {
-	 cskilldatatrs:[cskilldataTR];
+	 skillconfigTRS:[skillconfigTR];
 }
 
-table cskilldataTR
+table skillconfigTR
 {
-	 _id:int;
+	 _id:int(key);
 	 name:string;
 	 description:string;
 	 cooltime:int;
@@ -26,4 +26,4 @@ table cskilldataTR
 	 attacktype:int;
 	 selectortype:int;
 }
-root_type cskilldataTB;
+root_type skillconfigTB;

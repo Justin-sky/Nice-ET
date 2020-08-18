@@ -113,7 +113,7 @@ namespace ExcelExporter
                 //gen TB
                 sb.Append($"table {protoName}TB\n");
                 sb.Append("{\n");
-                sb.Append($"\t {protoName}trs:[{protoName}TR];\n");
+                sb.Append($"\t {protoName}TRS:[{protoName}TR];\n");
                 sb.Append("}\n\n"); //end TB
 
                 //gen TR
@@ -140,6 +140,12 @@ namespace ExcelExporter
                         continue;
                     }
                     string idlType = Convert(fieldType);
+
+                    //key
+                    if (fieldName.Equals("_id"))
+                    {
+                        idlType += "(key)";
+                    }
 
                     sb.Append($"\t {fieldName}:{idlType};\n");
                 }
@@ -222,7 +228,7 @@ namespace ExcelExporter
             using (StreamWriter sw = new StreamWriter(txt))
             {
                 sw.WriteLine('{');
-                sw.WriteLine($"\"{protoName}trs\":[");
+                sw.WriteLine($"\"{protoName}TRS\":[");
                 for (int i = 0; i < xssfWorkbook.NumberOfSheets; ++i)
                 {
                     ISheet sheet = xssfWorkbook.GetSheetAt(i);

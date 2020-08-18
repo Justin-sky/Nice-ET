@@ -1,5 +1,5 @@
 {
-"cunittrs":[
+"heroconfigTRS":[
 {"_id":2001,"baseatk":100,"sp":200,"hp":200,"attackdistance":1,"attackinterval":1}
 ,{"_id":2002,"baseatk":101,"sp":220,"hp":202,"attackdistance":2,"attackinterval":2}
 ,{"_id":2003,"baseatk":104,"sp":210,"hp":200,"attackdistance":1,"attackinterval":3}
