@@ -16,7 +16,6 @@ namespace NiceET
 	{
 		[BsonId]
 		public long Id { get; set; }
-		public int SkillID;
 		public string Name;
 		public string Description;
 		public int CoolTime;
@@ -25,7 +24,7 @@ namespace NiceET
 		public float AttackAngle;
 		public string[] AttackTargetTags;
 		public string[] ImpactType;
-		public int NextSkillId;
+		public int NextBattlerId;
 		public float AtkRatio;
 		public float DurationTime;
 		public float AtkInterval;

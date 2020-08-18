@@ -20,4 +20,3 @@ C:\Users\Justin\Documents\u3dWorkspace\NICE_Framework\Nice-ET\Bin\KcpLib.dll
 C:\Users\Justin\Documents\u3dWorkspace\NICE_Framework\Nice-ET\Bin\KcpLib.pdb
 C:\Users\Justin\Documents\u3dWorkspace\NICE_Framework\Nice-ET\ThirdParty\KcpLib\obj\Debug\KcpLib.dll
 C:\Users\Justin\Documents\u3dWorkspace\NICE_Framework\Nice-ET\ThirdParty\KcpLib\obj\Debug\KcpLib.pdb
-C:\Users\Justin\Documents\u3dWorkspace\NICE_Framework\Nice-ET\ThirdParty\KcpLib\obj\Debug\KcpLib.csprojAssemblyReference.cache

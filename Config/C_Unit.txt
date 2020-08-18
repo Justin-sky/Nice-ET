@@ -1,0 +1,6 @@
+[
+[2001, {"_id":2001,"BaseATK":100,"SP":200,"HP":200,"AttackDistance":1,"AttackInterval":1}],
+[2002, {"_id":2002,"BaseATK":101,"SP":220,"HP":202,"AttackDistance":2,"AttackInterval":2}],
+[2003, {"_id":2003,"BaseATK":104,"SP":210,"HP":200,"AttackDistance":1,"AttackInterval":3}],
+[2004, {"_id":2004,"BaseATK":109,"SP":200,"HP":200,"AttackDistance":1,"AttackInterval":2}],
+]

@@ -1,0 +1,17 @@
+C:\Users\Justin\Documents\u3dWorkspace\NICE_Framework\NiceET\Proto\netcoreapp3.1\snappy32.dll
+C:\Users\Justin\Documents\u3dWorkspace\NICE_Framework\NiceET\Proto\netcoreapp3.1\snappy64.dll
+C:\Users\Justin\Documents\u3dWorkspace\NICE_Framework\NiceET\Proto\netcoreapp3.1\libzstd.dll
+C:\Users\Justin\Documents\u3dWorkspace\NICE_Framework\NiceET\Proto\netcoreapp3.1\Proto2Cs.exe
+C:\Users\Justin\Documents\u3dWorkspace\NICE_Framework\NiceET\Proto\netcoreapp3.1\Proto2Cs.deps.json
+C:\Users\Justin\Documents\u3dWorkspace\NICE_Framework\NiceET\Proto\netcoreapp3.1\Proto2Cs.runtimeconfig.json
+C:\Users\Justin\Documents\u3dWorkspace\NICE_Framework\NiceET\Proto\netcoreapp3.1\Proto2Cs.runtimeconfig.dev.json
+C:\Users\Justin\Documents\u3dWorkspace\NICE_Framework\NiceET\Proto\netcoreapp3.1\Proto2Cs.dll
+C:\Users\Justin\Documents\u3dWorkspace\NICE_Framework\NiceET\Proto\netcoreapp3.1\Proto2Cs.pdb
+C:\Users\Justin\Documents\u3dWorkspace\NICE_Framework\NiceET\Proto2Cs\obj\Debug\netcoreapp3.1\Proto2Cs.csprojAssemblyReference.cache
+C:\Users\Justin\Documents\u3dWorkspace\NICE_Framework\NiceET\Proto2Cs\obj\Debug\netcoreapp3.1\Proto2Cs.AssemblyInfoInputs.cache
+C:\Users\Justin\Documents\u3dWorkspace\NICE_Framework\NiceET\Proto2Cs\obj\Debug\netcoreapp3.1\Proto2Cs.AssemblyInfo.cs
+C:\Users\Justin\Documents\u3dWorkspace\NICE_Framework\NiceET\Proto2Cs\obj\Debug\netcoreapp3.1\Proto2Cs.csproj.CoreCompileInputs.cache
+C:\Users\Justin\Documents\u3dWorkspace\NICE_Framework\NiceET\Proto2Cs\obj\Debug\netcoreapp3.1\Proto2Cs.csproj.CopyComplete
+C:\Users\Justin\Documents\u3dWorkspace\NICE_Framework\NiceET\Proto2Cs\obj\Debug\netcoreapp3.1\Proto2Cs.dll
+C:\Users\Justin\Documents\u3dWorkspace\NICE_Framework\NiceET\Proto2Cs\obj\Debug\netcoreapp3.1\Proto2Cs.pdb
+C:\Users\Justin\Documents\u3dWorkspace\NICE_Framework\NiceET\Proto2Cs\obj\Debug\netcoreapp3.1\Proto2Cs.genruntimeconfig.cache
