@@ -26,6 +26,18 @@ namespace ExcelExporter
 
         };
 
+        //变量以下划线开头
+        private string underscope_field(string field)
+        {
+            string res = field;
+
+            if (!field.StartsWith("_"))
+            {
+                res = $"_{field}";
+            }
+            return res;
+        }
+
         public void ExportJsonConfig()
         {
             try
@@ -235,7 +247,7 @@ namespace ExcelExporter
                         idlType += "(key)";
                     }
 
-                    sb.Append($"\t {fieldName}:{idlType};\n");
+                    sb.Append($"\t {underscope_field(fieldName)}:{idlType};\n");
                 }
 
                 sb.Append("}\n"); //end TR
@@ -372,7 +384,7 @@ namespace ExcelExporter
                     string fieldName = cellInfos[j].Name.ToLower();
 
                     string fieldType = cellInfos[j].Type;
-                    sb.Append($"\"{fieldName}\":{Convert(fieldType, fieldValue)}");
+                    sb.Append($"\"{underscope_field(fieldName)}\":{Convert(fieldType, fieldValue)}");
                 }
 
                 sb.Append("}");
