@@ -7,10 +7,10 @@ table heroconfigTB
 table heroconfigTR
 {
 	 _id:int(key);
-	 baseatk:float;
-	 sp:float;
-	 hp:float;
-	 attackdistance:float;
-	 attackinterval:float;
+	 _baseatk:float;
+	 _sp:float;
+	 _hp:float;
+	 _attackdistance:float;
+	 _attackinterval:float;
 }
 root_type heroconfigTB;

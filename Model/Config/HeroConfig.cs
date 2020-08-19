@@ -16,10 +16,10 @@ namespace NiceET
 	{
 		[BsonId]
 		public long Id { get; set; }
-		public float BaseATK;
-		public float SP;
-		public float HP;
-		public float AttackDistance;
-		public float AttackInterval;
+		public float _BaseATK;
+		public float _SP;
+		public float _HP;
+		public float _AttackDistance;
+		public float _AttackInterval;
 	}
 }

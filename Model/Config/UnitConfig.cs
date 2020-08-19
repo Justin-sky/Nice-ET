@@ -16,10 +16,10 @@ namespace NiceET
 	{
 		[BsonId]
 		public long Id { get; set; }
-		public string Name;
-		public string Desc;
-		public int Position;
-		public int Height;
-		public int Weight;
+		public string _Name;
+		public string _Desc;
+		public int _Position;
+		public int _Height;
+		public int _Weight;
 	}
 }

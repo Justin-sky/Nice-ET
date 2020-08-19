@@ -7,10 +7,10 @@ table unitconfigTB
 table unitconfigTR
 {
 	 _id:int(key);
-	 name:string;
-	 desc:string;
-	 position:int;
-	 height:int;
-	 weight:int;
+	 _name:string;
+	 _desc:string;
+	 _position:int;
+	 _height:int;
+	 _weight:int;
 }
 root_type unitconfigTB;

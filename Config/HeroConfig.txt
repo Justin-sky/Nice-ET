@@ -1,6 +1,6 @@
 [
-[2001, {"_id":2001,"BaseATK":100,"SP":200,"HP":200,"AttackDistance":1,"AttackInterval":1}],
-[2002, {"_id":2002,"BaseATK":101,"SP":220,"HP":202,"AttackDistance":2,"AttackInterval":2}],
-[2003, {"_id":2003,"BaseATK":104,"SP":210,"HP":200,"AttackDistance":1,"AttackInterval":3}],
-[2004, {"_id":2004,"BaseATK":109,"SP":200,"HP":200,"AttackDistance":1,"AttackInterval":2}],
+[2001, {"_id":2001,"_BaseATK":100,"_SP":200,"_HP":200,"_AttackDistance":1,"_AttackInterval":1}],
+[2002, {"_id":2002,"_BaseATK":101,"_SP":220,"_HP":202,"_AttackDistance":2,"_AttackInterval":2}],
+[2003, {"_id":2003,"_BaseATK":104,"_SP":210,"_HP":200,"_AttackDistance":1,"_AttackInterval":3}],
+[2004, {"_id":2004,"_BaseATK":109,"_SP":200,"_HP":200,"_AttackDistance":1,"_AttackInterval":2}],
 ]

@@ -7,23 +7,23 @@ table skillconfigTB
 table skillconfigTR
 {
 	 _id:int(key);
-	 name:string;
-	 description:string;
-	 cooltime:int;
-	 costsp:int;
-	 attackdistance:float;
-	 attackangle:float;
-	 attacktargettags:[string];
-	 impacttype:[string];
-	 nextbattlerid:int;
-	 atkratio:float;
-	 durationtime:float;
-	 atkinterval:float;
-	 skillprefab:string;
-	 animationname:string;
-	 hitfxprefab:string;
-	 level:int;
-	 attacktype:int;
-	 selectortype:int;
+	 _name:string;
+	 _description:string;
+	 _cooltime:int;
+	 _costsp:int;
+	 _attackdistance:float;
+	 _attackangle:float;
+	 _attacktargettags:[string];
+	 _impacttype:[string];
+	 _nextbattlerid:int;
+	 _atkratio:float;
+	 _durationtime:float;
+	 _atkinterval:float;
+	 _skillprefab:string;
+	 _animationname:string;
+	 _hitfxprefab:string;
+	 _level:int;
+	 _attacktype:int;
+	 _selectortype:int;
 }
 root_type skillconfigTB;

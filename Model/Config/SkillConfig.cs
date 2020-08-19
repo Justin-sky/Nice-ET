@@ -16,23 +16,23 @@ namespace NiceET
 	{
 		[BsonId]
 		public long Id { get; set; }
-		public string Name;
-		public string Description;
-		public int CoolTime;
-		public int CostSP;
-		public float AttackDistance;
-		public float AttackAngle;
-		public string[] AttackTargetTags;
-		public string[] ImpactType;
-		public int NextBattlerId;
-		public float AtkRatio;
-		public float DurationTime;
-		public float AtkInterval;
-		public string SkillPrefab;
-		public string AnimationName;
-		public string HitFxPrefab;
-		public int Level;
-		public int AttackType;
-		public int SelectorType;
+		public string _Name;
+		public string _Description;
+		public int _CoolTime;
+		public int _CostSP;
+		public float _AttackDistance;
+		public float _AttackAngle;
+		public string[] _AttackTargetTags;
+		public string[] _ImpactType;
+		public int _NextBattlerId;
+		public float _AtkRatio;
+		public float _DurationTime;
+		public float _AtkInterval;
+		public string _SkillPrefab;
+		public string _AnimationName;
+		public string _HitFxPrefab;
+		public int _Level;
+		public int _AttackType;
+		public int _SelectorType;
 	}
 }
