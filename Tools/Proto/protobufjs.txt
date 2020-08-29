@@ -1,0 +1,72 @@
+H5因为Adobe放弃对Flash Player的维护而又一次火热起来。
+目前有laya和egret两个H5游戏引擎，支持AS3、TS、JS三种语言开发。
+用H5开发游戏，绕不开与服务器的传输。流行的解决方案就是用protobuf。而JS也有protobuf。我的项目用的是Laya引擎的TS版本，可惜搜索整个网络还没找到TS版本的protobuf，只好用JS版本的了。
+
+protobufjs有3中使用方式，实时解析方式、json解析方式、静态代码方式（事先导出proto的js文件）。
+那么三种方式，可想而知，静态代码执行速度最快，并且可以直接访问到proto中定义的字段，不需要用字符串来传字段名字。这样也可以保证对proto取值赋值时不会出现拼写错误，也不需要记住字段的名字。
+
+有个专门的工具链接可以把.proto文件导出.js文件以及对应的.d.ts文件。
+首先安装Node.js
+然后，安装protobufjs：
+
+npm install protobufjs
+装完以后，可以用命令导出.js文件和.d.ts文件
+
+pbjs -t static-module -w commonjs -o joengProto.js joengProto.proto
+pbts -o joengProto.d.ts joengProto.js
+第一行导出js文件，第二行把导出的js生成对应的.d.ts文件，这样就可以在TS代码中调用了。
+-t -static-module参数，表示选的是静态代码模式。
+-w commonjs表示用什么标准来输出js代码，有各种比如es2015、es5、umd、amd什么的，然而我对js不太熟悉，总之只有commonjs可以执行成功，其他都会报错什么的。
+
+好了，导出成功了。但代码却执行不了，要么什么反应都没有，要么报一些奇怪的错：
+
+unexpected token import
+问题是什么呢？找了很多资料，也不知道什么问题，但没头没脑地看了很多文章以后，也差不多想到大概是什么问题了。
+
+由于TS/JS项目会用到各种第三方JS类库，而这些类库所用的标准各不相同，有的是ES5的有的是ES6的、commonJSd的，而你自己的项目可能是ES5的也可能是ES6的等等。而ES5是不支持import和export的，而es6呢，很多浏览器还不支持这个标准。
+那么问题来了，js三方库最令人头疼的就是各种库标准不一致，想要共存于一个项目，怎么办呢？顺着这个思路想，应该是把生成的js的代码转成兼容各种标准。
+
+早已有很多解决方案。由于找到大神阮一峰的一个文章详细介绍了怎么用babel，所以我选了babel。Babel 入门教程
+
+按照上面链接的内容，很快就可以把proto导出的代码转换标准了。然而依然不行，因为babel不会自动转换export和import，而我的代码运行不了主要就是这两个关键字的问题。绕了一圈等于白搞了。。。
+好在只需要安装一个插件就可以转export和import了。
+安装babel
+
+npm install babel
+安装插件
+
+npm install --save-dev babel-plugin-add-module-exports
+IDE中，在项目根目录建一个文件 .babelrc
+注意是你的项目的根目录，不是babel的也不是node的。
+内容如下：
+
+{
+  "presets": [
+    "es2015"
+  ],
+  "plugins": [
+    "add-module-exports"
+  ]
+}
+再次执行命令
+
+babel proto/joengProto.js -o proto/joengProto.js
+查看生成的joengProto.js文件，已经没有import和export关键字了。
+好了，现在就可以在TS项目中使用proto的JS代码了
+
+import awesome = require("../proto/joengProto");
+class MyTest
+{
+    constructor()
+    {
+        console.log("---start---");
+        var cls = awesome.awesomepackage.AwesomeMessage;
+
+        let msg:awesome.awesomepackage.AwesomeMessage = cls.create();
+        msg.awesomeField = "12345";
+        msg.num = 20;
+
+        console.log(msg.num);
+    }
+}
+new MyTest();
