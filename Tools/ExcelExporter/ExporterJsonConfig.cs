@@ -353,12 +353,12 @@ namespace ExcelExporter
                 string argvB      = $"-b -o output_bin output_idl/{fileName}.fbs  output_json/{fileName}.txt";
                 string argvCsharp = $"-n --gen-onefile  -o output_csharp output_idl/{fileName}.fbs  output_json/{fileName}.txt";
                 string argvLua    = $"-l -o output_lua output_idl/{fileName}.fbs  output_json/{fileName}.txt";
-                string argvTS = $"--ts --no-fb-import  -o output_ts output_idl/{fileName}.fbs  output_json/{fileName}.txt";
+                string argvTS = $"--ts --no-fb-import  -o output_fbts output_idl/{fileName}.fbs  output_json/{fileName}.txt";
 
                 ProcessHelper.Run( $"{exePath}/flatc.exe",  argvB,  exePath);
                 ProcessHelper.Run( $"{exePath}/flatc.exe", argvCsharp,  exePath);
                 ProcessHelper.Run( $"{exePath}/flatc.exe", argvLua,  exePath);
-                //ProcessHelper.Run( $"{exePath}/flatc.exe", argvTS,  exePath);
+                ProcessHelper.Run( $"{exePath}/flatc.exe", argvTS,  exePath);
 
                 Console.WriteLine(argvB);
             }
