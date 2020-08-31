@@ -32,3 +32,4 @@ C:\Users\Justin\Documents\u3dWorkspace\NICE_Framework\Nice-ET\Tools\Proto2Cs\obj
 C:\Users\Justin\Documents\u3dWorkspace\NICE_Framework\Nice-ET\Tools\Proto2Cs\obj\Debug\Proto2Cs.dll
 C:\Users\Justin\Documents\u3dWorkspace\NICE_Framework\Nice-ET\Tools\Proto2Cs\obj\Debug\Proto2Cs.pdb
 C:\Users\Justin\Documents\u3dWorkspace\NICE_Framework\Nice-ET\Tools\Proto2Cs\obj\Debug\Proto2Cs.genruntimeconfig.cache
+C:\Users\Justin\Documents\u3dWorkspace\NICE_Framework\Nice-ET\Tools\Proto2Cs\obj\Debug\Proto2Cs.csprojAssemblyReference.cache

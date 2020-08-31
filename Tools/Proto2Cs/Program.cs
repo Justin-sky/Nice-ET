@@ -95,6 +95,34 @@ namespace NiceET
             GenerateOpcode(ns, opcodeClassName, outputPath, sb);
             GenerateLuaIDDefine("Msg", outputPath);
             GenerateLuaIDMap("Msg", outputPath);
+            //生成TS Opcode
+            GenerateTsOpcode(outputPath);
+        }
+
+        private static void GenerateTsOpcode(string outputPath)
+        {
+            StringBuilder sb = new StringBuilder();
+
+            sb.AppendLine("import { NiceET } from \"./OuterMessage\";");
+            sb.AppendLine("export class Opcode{");
+
+            //静态变量部分
+            foreach (OpcodeInfo info in msgOpcode)
+            {
+                sb.AppendLine($"\tpublic static {info.Name.ToUpper()}:number = {info.Opcode};");
+            }
+
+            //map部分
+            sb.AppendLine("\tpublic static map = {");
+            foreach (OpcodeInfo info in msgOpcode)
+            {
+                sb.AppendLine($"\t\t{info.Opcode} : NiceET.{info.Name}.decode,");
+            }
+            sb.AppendLine("\t}");//map部分结束 
+
+            sb.AppendLine("}");
+            string tsPath = Path.Combine(outputPath, "Opcode.ts");
+            File.WriteAllText(tsPath, sb.ToString());
         }
 
         private static void GenerateOpcode(string ns, string outputFileName, string outputPath, StringBuilder sb)
