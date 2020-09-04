@@ -3,7 +3,7 @@
 protos/OuterMessage.protoNiceET"[
 C2M_TestRequest
 RpcIdZ (RRpcId
-ActorId] (RActorId
+ActorId] (RActorId
 request (	Rrequest"t
 M2C_TestResponse
 RpcIdZ (RRpcId
@@ -12,7 +12,7 @@
 response (	Rresponse"c
 Actor_TransferRequest
 RpcIdZ (RRpcId
-ActorId] (RActorId
+ActorId] (RActorId
 MapIndex (RMapIndex"^
 Actor_TransferResponse
 RpcIdZ (RRpcId
@@ -24,27 +24,27 @@
 RpcIdZ (RRpcId
 Error[ (RError
 Message\ (	RMessage
-UnitId (RUnitId&
+UnitId (RUnitId&
 Units (2.NiceET.UnitInfoRUnits"L
 UnitInfo
-UnitId (RUnitId
+UnitId (RUnitId
 X (RX
 Y (RY
 Z (RZ"i
 M2C_CreateUnits
 RpcIdZ (RRpcId
-ActorId] (RActorId&
+ActorId] (RActorId&
 Units (2.NiceET.UnitInfoRUnits"z
 Frame_ClickMap
 RpcIdZ (RRpcId
-ActorId] (RActorId
-Id^ (RId
+ActorId] (RActorId
+Id^ (RId
 X (RX
 Y (RY
 Z (RZ"›
 M2C_PathfindingResult
-ActorId] (RActorId
-Id (RId
+ActorId] (RActorId
+Id (RId
 X (RX
 Y (RY
 Z (RZ
@@ -78,22 +78,22 @@ M2C_Reload
 Error[ (RError
 Message\ (	RMessage
 Address (	RAddress
-Key (RKey
-GateId (RGateId"O
+Key (RKey
+GateId (RGateId"O
 C2G_LoginGate
 RpcIdZ (RRpcId
-Key (RKey
-GateId (RGateId"q
+Key (RKey
+GateId (RGateId"q
 G2C_LoginGate
 RpcIdZ (RRpcId
 Error[ (RError
 Message\ (	RMessage
-PlayerId (RPlayerId"+
+PlayerId (RPlayerId"+
 G2C_TestHotfixMessage
 Info (	RInfo"Z
 C2M_TestActorRequest
 RpcIdZ (RRpcId
-ActorId[ (RActorId
+ActorId[ (RActorId
 Info (	RInfo"q
 M2C_TestActorResponse
 RpcIdZ (RRpcId
@@ -115,4 +115,4 @@ PlayerInfo4
 PlayerInfos (2.NiceET.PlayerInfoRPlayerInfos.
 TestRepeatedString (	RTestRepeatedString,
 TestRepeatedInt32 (RTestRepeatedInt32,
-TestRepeatedInt64 (RTestRepeatedInt64bproto3
+TestRepeatedInt64 (RTestRepeatedInt64bproto3

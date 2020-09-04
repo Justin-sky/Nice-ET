@@ -43,12 +43,10 @@ namespace NiceET
 
 			session.AddComponent<SessionPlayerComponent>().Player = player;
 			session.AddComponent<MailBoxComponent, MailboxType>(MailboxType.GateSession);
-
+			
 			response.PlayerId = player.Id;
 			reply();
 
-			session.Send(new G2C_TestHotfixMessage() { Info = "recv hotfix message success" });
-			await ETTask.CompletedTask;
 		}
 	}
 }

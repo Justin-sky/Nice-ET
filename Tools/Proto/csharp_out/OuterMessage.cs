@@ -48,7 +48,7 @@ namespace NiceET {
       }
       if (ActorId != 0L) {
         output.WriteRawTag(232, 5);
-        output.WriteInt64(ActorId);
+        output.WriteSInt64(ActorId);
       }
     }
 
@@ -58,7 +58,7 @@ namespace NiceET {
         size += 2 + pb::CodedOutputStream.ComputeInt32Size(RpcId);
       }
       if (ActorId != 0L) {
-        size += 2 + pb::CodedOutputStream.ComputeInt64Size(ActorId);
+        size += 2 + pb::CodedOutputStream.ComputeSInt64Size(ActorId);
       }
       if (Request.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Request);
@@ -85,7 +85,7 @@ namespace NiceET {
             break;
           }
           case 744: {
-            ActorId = input.ReadInt64();
+            ActorId = input.ReadSInt64();
             break;
           }
         }
@@ -238,7 +238,7 @@ namespace NiceET {
       }
       if (ActorId != 0L) {
         output.WriteRawTag(232, 5);
-        output.WriteInt64(ActorId);
+        output.WriteSInt64(ActorId);
       }
     }
 
@@ -248,7 +248,7 @@ namespace NiceET {
         size += 2 + pb::CodedOutputStream.ComputeInt32Size(RpcId);
       }
       if (ActorId != 0L) {
-        size += 2 + pb::CodedOutputStream.ComputeInt64Size(ActorId);
+        size += 2 + pb::CodedOutputStream.ComputeSInt64Size(ActorId);
       }
       if (MapIndex != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(MapIndex);
@@ -275,7 +275,7 @@ namespace NiceET {
             break;
           }
           case 744: {
-            ActorId = input.ReadInt64();
+            ActorId = input.ReadSInt64();
             break;
           }
         }
@@ -467,7 +467,7 @@ namespace NiceET {
     public void WriteTo(pb::CodedOutputStream output) {
       if (UnitId != 0L) {
         output.WriteRawTag(8);
-        output.WriteInt64(UnitId);
+        output.WriteSInt64(UnitId);
       }
       units_.WriteTo(output, _repeated_units_codec);
       if (RpcId != 0) {
@@ -496,7 +496,7 @@ namespace NiceET {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(Message);
       }
       if (UnitId != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(UnitId);
+        size += 1 + pb::CodedOutputStream.ComputeSInt64Size(UnitId);
       }
       size += units_.CalculateSize(_repeated_units_codec);
       return size;
@@ -516,7 +516,7 @@ namespace NiceET {
             input.SkipLastField();
             break;
           case 8: {
-            UnitId = input.ReadInt64();
+            UnitId = input.ReadSInt64();
             break;
           }
           case 18: {
@@ -580,7 +580,7 @@ namespace NiceET {
     public void WriteTo(pb::CodedOutputStream output) {
       if (UnitId != 0L) {
         output.WriteRawTag(8);
-        output.WriteInt64(UnitId);
+        output.WriteSInt64(UnitId);
       }
       if (X != 0F) {
         output.WriteRawTag(21);
@@ -599,7 +599,7 @@ namespace NiceET {
     public int CalculateSize() {
       int size = 0;
       if (UnitId != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(UnitId);
+        size += 1 + pb::CodedOutputStream.ComputeSInt64Size(UnitId);
       }
       if (X != 0F) {
         size += 1 + 4;
@@ -625,7 +625,7 @@ namespace NiceET {
             input.SkipLastField();
             break;
           case 8: {
-            UnitId = input.ReadInt64();
+            UnitId = input.ReadSInt64();
             break;
           }
           case 21: {
@@ -682,7 +682,7 @@ namespace NiceET {
       }
       if (ActorId != 0L) {
         output.WriteRawTag(232, 5);
-        output.WriteInt64(ActorId);
+        output.WriteSInt64(ActorId);
       }
     }
 
@@ -692,7 +692,7 @@ namespace NiceET {
         size += 2 + pb::CodedOutputStream.ComputeInt32Size(RpcId);
       }
       if (ActorId != 0L) {
-        size += 2 + pb::CodedOutputStream.ComputeInt64Size(ActorId);
+        size += 2 + pb::CodedOutputStream.ComputeSInt64Size(ActorId);
       }
       size += units_.CalculateSize(_repeated_units_codec);
       return size;
@@ -718,7 +718,7 @@ namespace NiceET {
             break;
           }
           case 744: {
-            ActorId = input.ReadInt64();
+            ActorId = input.ReadSInt64();
             break;
           }
         }
@@ -798,11 +798,11 @@ namespace NiceET {
       }
       if (ActorId != 0L) {
         output.WriteRawTag(232, 5);
-        output.WriteInt64(ActorId);
+        output.WriteSInt64(ActorId);
       }
       if (Id != 0L) {
         output.WriteRawTag(240, 5);
-        output.WriteInt64(Id);
+        output.WriteSInt64(Id);
       }
     }
 
@@ -812,10 +812,10 @@ namespace NiceET {
         size += 2 + pb::CodedOutputStream.ComputeInt32Size(RpcId);
       }
       if (ActorId != 0L) {
-        size += 2 + pb::CodedOutputStream.ComputeInt64Size(ActorId);
+        size += 2 + pb::CodedOutputStream.ComputeSInt64Size(ActorId);
       }
       if (Id != 0L) {
-        size += 2 + pb::CodedOutputStream.ComputeInt64Size(Id);
+        size += 2 + pb::CodedOutputStream.ComputeSInt64Size(Id);
       }
       if (X != 0F) {
         size += 1 + 4;
@@ -859,11 +859,11 @@ namespace NiceET {
             break;
           }
           case 744: {
-            ActorId = input.ReadInt64();
+            ActorId = input.ReadSInt64();
             break;
           }
           case 752: {
-            Id = input.ReadInt64();
+            Id = input.ReadSInt64();
             break;
           }
         }
@@ -943,7 +943,7 @@ namespace NiceET {
     public void WriteTo(pb::CodedOutputStream output) {
       if (Id != 0L) {
         output.WriteRawTag(8);
-        output.WriteInt64(Id);
+        output.WriteSInt64(Id);
       }
       if (X != 0F) {
         output.WriteRawTag(21);
@@ -962,17 +962,17 @@ namespace NiceET {
       zs_.WriteTo(output, _repeated_zs_codec);
       if (ActorId != 0L) {
         output.WriteRawTag(232, 5);
-        output.WriteInt64(ActorId);
+        output.WriteSInt64(ActorId);
       }
     }
 
     public int CalculateSize() {
       int size = 0;
       if (ActorId != 0L) {
-        size += 2 + pb::CodedOutputStream.ComputeInt64Size(ActorId);
+        size += 2 + pb::CodedOutputStream.ComputeSInt64Size(ActorId);
       }
       if (Id != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Id);
+        size += 1 + pb::CodedOutputStream.ComputeSInt64Size(Id);
       }
       if (X != 0F) {
         size += 1 + 4;
@@ -1005,7 +1005,7 @@ namespace NiceET {
             input.SkipLastField();
             break;
           case 8: {
-            Id = input.ReadInt64();
+            Id = input.ReadSInt64();
             break;
           }
           case 21: {
@@ -1036,7 +1036,7 @@ namespace NiceET {
             break;
           }
           case 744: {
-            ActorId = input.ReadInt64();
+            ActorId = input.ReadSInt64();
             break;
           }
         }
@@ -1520,11 +1520,11 @@ namespace NiceET {
       }
       if (Key != 0L) {
         output.WriteRawTag(16);
-        output.WriteInt64(Key);
+        output.WriteSInt64(Key);
       }
       if (GateId != 0L) {
         output.WriteRawTag(24);
-        output.WriteInt64(GateId);
+        output.WriteSInt64(GateId);
       }
       if (RpcId != 0) {
         output.WriteRawTag(208, 5);
@@ -1555,10 +1555,10 @@ namespace NiceET {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Address);
       }
       if (Key != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Key);
+        size += 1 + pb::CodedOutputStream.ComputeSInt64Size(Key);
       }
       if (GateId != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(GateId);
+        size += 1 + pb::CodedOutputStream.ComputeSInt64Size(GateId);
       }
       return size;
     }
@@ -1581,11 +1581,11 @@ namespace NiceET {
             break;
           }
           case 16: {
-            Key = input.ReadInt64();
+            Key = input.ReadSInt64();
             break;
           }
           case 24: {
-            GateId = input.ReadInt64();
+            GateId = input.ReadSInt64();
             break;
           }
           case 720: {
@@ -1640,11 +1640,11 @@ namespace NiceET {
     public void WriteTo(pb::CodedOutputStream output) {
       if (Key != 0L) {
         output.WriteRawTag(8);
-        output.WriteInt64(Key);
+        output.WriteSInt64(Key);
       }
       if (GateId != 0L) {
         output.WriteRawTag(16);
-        output.WriteInt64(GateId);
+        output.WriteSInt64(GateId);
       }
       if (RpcId != 0) {
         output.WriteRawTag(208, 5);
@@ -1658,10 +1658,10 @@ namespace NiceET {
         size += 2 + pb::CodedOutputStream.ComputeInt32Size(RpcId);
       }
       if (Key != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Key);
+        size += 1 + pb::CodedOutputStream.ComputeSInt64Size(Key);
       }
       if (GateId != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(GateId);
+        size += 1 + pb::CodedOutputStream.ComputeSInt64Size(GateId);
       }
       return size;
     }
@@ -1677,11 +1677,11 @@ namespace NiceET {
             input.SkipLastField();
             break;
           case 8: {
-            Key = input.ReadInt64();
+            Key = input.ReadSInt64();
             break;
           }
           case 16: {
-            GateId = input.ReadInt64();
+            GateId = input.ReadSInt64();
             break;
           }
           case 720: {
@@ -1733,7 +1733,7 @@ namespace NiceET {
     public void WriteTo(pb::CodedOutputStream output) {
       if (PlayerId != 0L) {
         output.WriteRawTag(8);
-        output.WriteInt64(PlayerId);
+        output.WriteSInt64(PlayerId);
       }
       if (RpcId != 0) {
         output.WriteRawTag(208, 5);
@@ -1761,7 +1761,7 @@ namespace NiceET {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(Message);
       }
       if (PlayerId != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(PlayerId);
+        size += 1 + pb::CodedOutputStream.ComputeSInt64Size(PlayerId);
       }
       return size;
     }
@@ -1778,7 +1778,7 @@ namespace NiceET {
             input.SkipLastField();
             break;
           case 8: {
-            PlayerId = input.ReadInt64();
+            PlayerId = input.ReadSInt64();
             break;
           }
           case 720: {
@@ -1883,7 +1883,7 @@ namespace NiceET {
       }
       if (ActorId != 0L) {
         output.WriteRawTag(216, 5);
-        output.WriteInt64(ActorId);
+        output.WriteSInt64(ActorId);
       }
     }
 
@@ -1893,7 +1893,7 @@ namespace NiceET {
         size += 2 + pb::CodedOutputStream.ComputeInt32Size(RpcId);
       }
       if (ActorId != 0L) {
-        size += 2 + pb::CodedOutputStream.ComputeInt64Size(ActorId);
+        size += 2 + pb::CodedOutputStream.ComputeSInt64Size(ActorId);
       }
       if (Info.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Info);
@@ -1920,7 +1920,7 @@ namespace NiceET {
             break;
           }
           case 728: {
-            ActorId = input.ReadInt64();
+            ActorId = input.ReadSInt64();
             break;
           }
         }
@@ -2185,7 +2185,7 @@ namespace NiceET {
     }
 
     private static readonly pb::FieldCodec<long> _repeated_testRepeatedInt64_codec
-        = pb::FieldCodec.ForInt64(42);
+        = pb::FieldCodec.ForSInt64(42);
     private pbc::RepeatedField<long> testRepeatedInt64_ = new pbc::RepeatedField<long>();
     public pbc::RepeatedField<long> TestRepeatedInt64 {
       get { return testRepeatedInt64_; }

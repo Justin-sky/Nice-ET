@@ -12,6 +12,9 @@ namespace NiceET
 			scene.GetComponent<GateSessionKeyComponent>().Add(key, request.Account);
 			response.Key = key;
 			response.GateId = scene.Id;
+
+			Log.Info($"GetLoginKey: {key},{scene.Id}");
+
 			reply();
 			await ETTask.CompletedTask;
 		}

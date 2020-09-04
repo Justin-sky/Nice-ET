@@ -37,6 +37,8 @@ namespace NiceET
 
 			response.Address = config.OuterAddress;
 			response.Key = g2RGetLoginKey.Key;
+
+			Log.Info($"Gate:{response.Address}, Key:{response.Key}");
 			response.GateId = g2RGetLoginKey.GateId;
 			reply();
 		}
