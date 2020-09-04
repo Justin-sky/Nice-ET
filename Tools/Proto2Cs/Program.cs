@@ -104,6 +104,12 @@ namespace NiceET
             StringBuilder sb = new StringBuilder();
 
             sb.AppendLine("import { NiceET } from \"./OuterMessage\";");
+            
+            sb.AppendLine("export class DecodeMsg{");
+            sb.AppendLine("\tpublic rpcId:number;");
+            sb.AppendLine("\tpublic msgObj:any;");
+            sb.AppendLine("}");
+            
             sb.AppendLine("export class Opcode{");
 
             //静态变量部分
@@ -119,6 +125,15 @@ namespace NiceET
                 sb.AppendLine($"\t\t{info.Opcode} : NiceET.{info.Name}.decode,");
             }
             sb.AppendLine("\t}");//map部分结束 
+
+
+            sb.AppendLine("\tpublic static decode(opcode:number, msg:Uint8Array):DecodeMsg {");
+            sb.AppendLine("\t\tlet msgObj = this.map[opcode](msg);");
+            sb.AppendLine("\t\tlet decodeMsg = new DecodeMsg();");
+            sb.AppendLine("\t\tdecodeMsg.rpcId = msgObj.RpcId;");
+            sb.AppendLine("\t\tdecodeMsg.msgObj = msgObj;");
+            sb.AppendLine("\t\treturn decodeMsg;");
+            sb.AppendLine("\t}");
 
             sb.AppendLine("}");
             string tsPath = Path.Combine(outputPath, "Opcode.ts");
