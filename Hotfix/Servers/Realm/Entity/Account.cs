@@ -4,8 +4,8 @@ namespace NiceET
 {
     public sealed class Account : Entity
     {
-        public string AccountName { get; set; }
-        public string Password { get; set; }
+        public string AccountName { get; set; } = default!;
+        public string Password { get; set; } = default!;
 
         public void Awake(string accountName, string password)
         {

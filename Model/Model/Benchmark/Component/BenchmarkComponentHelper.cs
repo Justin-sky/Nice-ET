@@ -59,6 +59,7 @@ namespace NiceET
 				long time = time2 - self.time1;
 				self.time1 = time2;
 				Log.Info($"Benchmark k: {self.k} 每10W次耗时: {time} ms {session.Network.Count}");
+				await ETTask.CompletedTask;
 			}
 			catch (Exception e)
 			{

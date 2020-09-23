@@ -22,7 +22,7 @@ namespace NiceET
 					continue;
 				}
 
-				IMHandler? iMHandler = Activator.CreateInstance(type) as IMHandler;
+				var iMHandler = Activator.CreateInstance(type) as IMHandler;
 				if (iMHandler == null)
 				{
 					Log.Error($"message handle {type.Name} 需要继承 IMHandler");

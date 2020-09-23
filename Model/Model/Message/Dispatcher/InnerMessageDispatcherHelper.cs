@@ -5,6 +5,8 @@
 		public static async ETVoid HandleIActorResponse(Session session, IActorResponse iActorResponse)
 		{
 			ActorMessageSenderComponent.Instance.RunMessage(iActorResponse);
+
+			await ETTask.CompletedTask;
 		}
 
 		public static async ETVoid HandleIActorRequest(Session session, IActorRequest iActorRequest)

@@ -36,7 +36,10 @@ namespace NiceET
 			//// 解锁unit的地址,并且更新unit的instanceId
 			//await Game.Scene.GetComponent<LocationProxyComponent>().UnLock(unitId, instanceId, m2m_TrasferUnitResponse.InstanceId);
 
+			await ETTask.CompletedTask;
+
 			reply();
+
 		}
 	}
 }
